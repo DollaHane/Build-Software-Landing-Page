@@ -33,6 +33,7 @@ export default function Animation() {
             layoutId={item.id}
           >
             <div className="flex items-center gap-6">
+              {/* @ts-expect-error Server Component */}
               <ServicesCardIcon cardRef={item.ref} />
               <h1 className="text-2xl font-bold text-center cursor-pointer">
                 {item.title}
