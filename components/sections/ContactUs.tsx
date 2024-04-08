@@ -374,17 +374,17 @@ export default function ContactUs({ setSelectedPage }: Props) {
               </div>
               {isAboveMediumScreens && (
                 <div className="flex w-full">
-                  <div className="flex relative w-full h-full">
-                    <div className="w-full min-w-[250px] max-w-[300px]  flex absolute left-20 z-50">
+                  <div className="flex relative size-full">
+                    <div className="w-full min-w-[250px] max-w-[300px] flex absolute left-20 z-50">
                       <Image src={MacBook} alt="macbook" className="flex" />
                     </div>
                     <div className="w-full min-w-[250px] max-w-[300px] flex absolute top-10 -rotate-6">
-                      <div className="w-full h-full overflow-hidden rounded-xl">
+                      <div className="size-full overflow-hidden rounded-xl">
                         <Image src={Snippet} alt="snippet" className="flex" />
                       </div>
-                      <div className="w-full h-full -bottom-1 absolute bg-gradient-to-bl from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
-                      <div className="w-full h-full -bottom-1 absolute bg-gradient-to-br from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
-                      <div className="w-full h-full absolute bg-gradient-to-b from-backgroundTwo/0 via-backgroundTwo/30 to-backgroundTwo" />
+                      <div className="size-full -bottom-1 absolute bg-gradient-to-bl from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
+                      <div className="size-full -bottom-1 absolute bg-gradient-to-br from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
+                      <div className="size-full absolute bg-gradient-to-b from-backgroundTwo/0 via-backgroundTwo/30 to-backgroundTwo" />
                     </div>
                   </div>
                 </div>

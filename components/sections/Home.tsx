@@ -48,10 +48,10 @@ export default function Home({ setSelectedPage }: Props) {
             </h1>
           </div>
           <p className="max-w-[700px] text-xl text-primary">
-            "Experience a redefined web experience that blends cutting-edge
+            &quot;Experience a redefined web experience that blends cutting-edge
             technology with artistic flair. We&apos;re a web application
             development studio with a mission to bring you a meaningful
-            experience in the digital world."
+            experience in the digital world.&quot;
           </p>
         </div>
         <div className="flex gap-4">
