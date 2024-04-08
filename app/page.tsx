@@ -1,39 +1,53 @@
-import Link from "next/link"
+"use client"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import React, { useEffect, useState } from "react"
+import Lenis from "@studio-freight/lenis"
+
+import { SelectedPage } from "@/types/types"
+import ContactUs from "@/components/sections/ContactUs"
+import Footer from "@/components/sections/Footer"
+import Home from "@/components/sections/Home"
+import Services from "@/components/sections/Services"
+
+import Buidl from "../assets/Buidl.png"
 
 export default function IndexPage() {
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  )
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true)
+        setSelectedPage(SelectedPage.Home)
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
+
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
+    <div className="items-center">
+      <div className="grid w-full grid-cols-1">
+        <Home setSelectedPage={setSelectedPage} />
+        <Services setSelectedPage={setSelectedPage} />
+        <ContactUs setSelectedPage={setSelectedPage} />
+        <Footer />
       </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
-      </div>
-    </section>
+    </div>
   )
 }

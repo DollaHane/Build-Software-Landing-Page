@@ -18,7 +18,9 @@ module.exports = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        backgroundTwo: "hsl(var(--backgroundTwo))",
         foreground: "hsl(var(--foreground))",
+        bricks: "hsl(var(--bricks))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -54,12 +56,12 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ['var(--font-geist-sans)'],
       },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "var(--radix-accordion-content-height)"},
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
