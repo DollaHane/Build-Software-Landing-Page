@@ -7,37 +7,38 @@ export default function TermsAndConditions() {
   return (
     <section className="relative z-40">
       <div className="flex justify-between p-5">
-        <Image alt="logo" src={logo} className="w-28" />
         <a href="/">
           <p>Return to the home page.</p>
         </a>
       </div>
-      <div className="space-y-5 px-16 py-10">
+      <div className="space-y-5 px-5 md:px-16 py-10">
         <h1 className="text-2xl font-bold" id="top">
           TERMS AND CONDITIONS
         </h1>
-        <p className="italic text-amber-400">Last updated September 05, 2023</p>
+        <p className="italic">Last updated September 05, 2023</p>
         <h1 className="text-lg font-bold">AGREEMENT TO OUR LEGAL TERMS</h1>
         <p>
-          We are Silan Industries Pty (Ltd) (&apos;Company&apos;, &apos;we&apos;, &apos;us&apos;, or &apos;our&apos;), a
-          company registered in South Africa at 36 Neethling Close, Kunene Park,
-          Port Elizabeth, East Cape 6025. Our VAT number is 4770293936.
+          We are Buidl.co.za (&apos;Company&apos;, &apos;we&apos;,
+          &apos;us&apos;, or &apos;our&apos;), a company registered in South
+          Africa at 36 Neethling Close, Kunene Park, Port Elizabeth, East Cape
+          6025. Our VAT number is 4770293936.
         </p>
         <p>
-          We operate the website https://www.silan.co.za (the &apos;Site&apos;), as well
-          as any other related products and services that refer or link to these
-          legal terms (the &apos;Legal Terms&apos;) (collectively, the &apos;Services&apos;).
+          We operate the website https://www.buidl.co.za (the &apos;Site&apos;),
+          as well as any other related products and services that refer or link
+          to these legal terms (the &apos;Legal Terms&apos;) (collectively, the
+          &apos;Services&apos;).
         </p>
         <p>
           You can contact us by phone at +27 (0)60 320 7122, email at
-          shane@silan.co.za, or by mail to 36 Neethling Close, Kunene Park, Port
+          shane@buidl.co.za, or by mail to 36 Neethling Close, Kunene Park, Port
           Elizabeth, East Cape 6025, South Africa.
         </p>
         <p>
           These Legal Terms constitute a legally binding agreement made between
-          you, whether personally or on behalf of an entity (&apos;you&apos;), and Silan
-          Industries Pty (Ltd), concerning your access to and use of the
-          Services. You agree that by accessing the Services, you have read,
+          you, whether personally or on behalf of an entity (&apos;you&apos;),
+          and Silan Industries Pty (Ltd), concerning your access to and use of
+          the Services. You agree that by accessing the Services, you have read,
           understood, and agreed to be bound by all of these Legal Terms. IF YOU
           DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY
           PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE
@@ -48,13 +49,14 @@ export default function TermsAndConditions() {
           the Services from time to time are hereby expressly incorporated
           herein by reference. We reserve the right, in our sole discretion, to
           make changes or modifications to these Legal Terms from time to time.
-          We will alert you about any changes by updating the &apos;Last updated&apos;
-          date of these Legal Terms, and you waive any right to receive specific
-          notice of each such change. It is your responsibility to periodically
-          review these Legal Terms to stay informed of updates. You will be
-          subject to, and will be deemed to have been made aware of and to have
-          accepted, the changes in any revised Legal Terms by your continued use
-          of the Services after the date such revised Legal Terms are posted.
+          We will alert you about any changes by updating the &apos;Last
+          updated&apos; date of these Legal Terms, and you waive any right to
+          receive specific notice of each such change. It is your responsibility
+          to periodically review these Legal Terms to stay informed of updates.
+          You will be subject to, and will be deemed to have been made aware of
+          and to have accepted, the changes in any revised Legal Terms by your
+          continued use of the Services after the date such revised Legal Terms
+          are posted.
         </p>
         <p>
           All users who are minors in the jurisdiction in which they reside
@@ -63,7 +65,7 @@ export default function TermsAndConditions() {
           If you are a minor, you must have your parent or guardian read and
           agree to these Legal Terms prior to you using the Services.
         </p>
-        <p className="italic text-amber-400">
+        <p className="italic">
           We recommend that you print a copy of these Legal Terms for your
           records.
         </p>
@@ -122,8 +124,9 @@ export default function TermsAndConditions() {
           We are the owner or the licensee of all intellectual property rights
           in our Services, including all source code, databases, functionality,
           software, website designs, audio, video, text, photographs, and
-          graphics in the Services (collectively, the &apos;Content&apos;), as well as the
-          trademarks, service marks, and logos contained therein (the &apos;Marks&apos;).
+          graphics in the Services (collectively, the &apos;Content&apos;), as
+          well as the trademarks, service marks, and logos contained therein
+          (the &apos;Marks&apos;).
         </p>
         <p>
           Our Content and Marks are protected by copyright and trademark laws
@@ -131,15 +134,15 @@ export default function TermsAndConditions() {
           laws) and treaties in the United States and around the world.
         </p>
         <p>
-          The Content and Marks are provided in or through the Services &apos;AS IS&apos;
-          for your personal, non-commercial use or internal business purpose
-          only.
+          The Content and Marks are provided in or through the Services &apos;AS
+          IS&apos; for your personal, non-commercial use or internal business
+          purpose only.
         </p>
         <h1 className="font-semibold">Your use of our Services</h1>
         <p>
           Subject to your compliance with these Legal Terms, including the
-          &apos;PROHIBITED ACTIVITIES&apos; section below, we grant you a non-exclusive,
-          non-transferable, revocable licence to:
+          &apos;PROHIBITED ACTIVITIES&apos; section below, we grant you a
+          non-exclusive, non-transferable, revocable licence to:
         </p>
         <ul className="list-disc pl-10">
           <li>access the Services; and</li>
@@ -181,19 +184,19 @@ export default function TermsAndConditions() {
         </p>
         <h1 className="font-semibold">Your submissions</h1>
         <p>
-          Please review this section and the &apos;PROHIBITED ACTIVITIES&apos; section
-          carefully prior to using our Services to understand the (a) rights you
-          give us and (b) obligations you have when you post or upload any
-          content through the Services.
+          Please review this section and the &apos;PROHIBITED ACTIVITIES&apos;
+          section carefully prior to using our Services to understand the (a)
+          rights you give us and (b) obligations you have when you post or
+          upload any content through the Services.
         </p>
         <p>
           Submissions: By directly sending us any question, comment, suggestion,
           idea, feedback, or other information about the Services
-          (&apos;Submissions&apos;), you agree to assign to us all intellectual property
-          rights in such Submission. You agree that we shall own this Submission
-          and be entitled to its unrestricted use and dissemination for any
-          lawful purpose, commercial or otherwise, without acknowledgment or
-          compensation to you.
+          (&apos;Submissions&apos;), you agree to assign to us all intellectual
+          property rights in such Submission. You agree that we shall own this
+          Submission and be entitled to its unrestricted use and dissemination
+          for any lawful purpose, commercial or otherwise, without
+          acknowledgment or compensation to you.
         </p>
         <p>
           You are responsible for what you post or upload: By sending us
@@ -202,9 +205,9 @@ export default function TermsAndConditions() {
         <ul className="list-disc pl-10">
           <li>
             confirm that you have read and agree with our &apos;PROHIBITED
-            ACTIVITIES&apos; and will not post, send, publish, upload, or transmit
-            through the Services any Submission that is illegal, harassing,
-            hateful, harmful, defamatory, obscene, bullying, abusive,
+            ACTIVITIES&apos; and will not post, send, publish, upload, or
+            transmit through the Services any Submission that is illegal,
+            harassing, hateful, harmful, defamatory, obscene, bullying, abusive,
             discriminatory, threatening to any person or group, sexually
             explicit, false, inaccurate, deceitful, or misleading;
           </li>
@@ -313,9 +316,10 @@ export default function TermsAndConditions() {
             Upload or transmit (or attempt to upload or to transmit) any
             material that acts as a passive or active information collection or
             transmission mechanism, including without limitation, clear graphics
-            interchange formats (&apos;gifs&apos;), 1×1 pixels, web bugs, cookies, or
-            other similar devices (sometimes referred to as &apos;spyware&apos; or
-              &apos;passive collection mechanisms&apos; or &apos;pcms&apos;).
+            interchange formats (&apos;gifs&apos;), 1×1 pixels, web bugs,
+            cookies, or other similar devices (sometimes referred to as
+            &apos;spyware&apos; or &apos;passive collection mechanisms&apos; or
+            &apos;pcms&apos;).
           </li>
           <li>
             Interfere with, disrupt, or create an undue burden on the Services
@@ -330,8 +334,8 @@ export default function TermsAndConditions() {
             or restrict access to the Services, or any portion of the Services.
           </li>
           <li>
-            Copy or adapt the Services&apos; software, including but not limited to
-            Flash, PHP, HTML, JavaScript, or other code.
+            Copy or adapt the Services&apos; software, including but not limited
+            to Flash, PHP, HTML, JavaScript, or other code.
           </li>
           <li>
             Except as permitted by applicable law, decipher, decompile,
@@ -475,13 +479,14 @@ export default function TermsAndConditions() {
         <h1>Informal Negotiations</h1>
         <p>
           To expedite resolution and control the cost of any dispute,
-          controversy, or claim related to these Legal Terms (each a &apos;Dispute&apos;
-          and collectively, the &apos;Disputes&apos;) brought by either you or us
-          (individually, a &apos;Party&apos; and collectively, the &apos;Parties&apos;), the Parties
-          agree to first attempt to negotiate any Dispute (except those Disputes
-          expressly provided below) informally for at least thirty (30) days
-          before initiating arbitration. Such informal negotiations commence
-          upon written notice from one Party to the other Party.
+          controversy, or claim related to these Legal Terms (each a
+          &apos;Dispute&apos; and collectively, the &apos;Disputes&apos;)
+          brought by either you or us (individually, a &apos;Party&apos; and
+          collectively, the &apos;Parties&apos;), the Parties agree to first
+          attempt to negotiate any Dispute (except those Disputes expressly
+          provided below) informally for at least thirty (30) days before
+          initiating arbitration. Such informal negotiations commence upon
+          written notice from one Party to the other Party.
         </p>
         <h1 className="font-semibold">Binding Arbitration</h1>
         <p>
@@ -547,14 +552,14 @@ export default function TermsAndConditions() {
           INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
           MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
           NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE
-          ACCURACY OR COMPLETENESS OF THE SERVICES&apos; CONTENT OR THE CONTENT OF
-          ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL
-          ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR
-          INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY
-          DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND
-          USE OF THE SERVICES, (3) ANY UNAUTHORISED ACCESS TO OR USE OF OUR
-          SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR
-          FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR
+          ACCURACY OR COMPLETENESS OF THE SERVICES&apos; CONTENT OR THE CONTENT
+          OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE
+          WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS,
+          MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL
+          INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM
+          YOUR ACCESS TO AND USE OF THE SERVICES, (3) ANY UNAUTHORISED ACCESS TO
+          OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION
+          AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR
           CESSATION OF TRANSMISSION TO OR FROM THE SERVICES, (5) ANY BUGS,
           VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR
           THROUGH THE SERVICES BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR
@@ -688,12 +693,12 @@ export default function TermsAndConditions() {
           at:
         </p>
         <ul className="list-disc pl-10">
-          <li>Silan Industries Pty (Ltd)</li>
+          <li>Buidl.co.za</li>
           <li>36 Neethling Close</li>
           <li>Kunene Park</li>
           <li>Port Elizabeth, East Cape 6025 South Africa</li>
           <li>Phone: +27 (0)60 320 7122</li>
-          <li>shane@silan.co.za</li>
+          <li>shane@buidl.co.za</li>
         </ul>
         <a className="italic text-slate-400" href="#top">
           Back to the top

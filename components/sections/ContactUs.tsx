@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import { useForm, type FieldApi } from "@tanstack/react-form"
 import { useMutation } from "@tanstack/react-query"
@@ -11,16 +11,15 @@ import { AtSign, Contact, Phone, Send } from "lucide-react"
 
 import { SelectedPage } from "@/types/types"
 import { checkbox } from "@/lib/JSON Files/ContactCheckbox"
-import { FormCreationRequest } from "@/lib/validators/emailJs"
 import {
-  fromName,
-  fromSurname,
-  message,
+  email,
+  name,
   onChangeAsync,
   onChangeAsyncDebounceMs,
-  subject,
-  userEmail,
+  source,
+  website,
 } from "@/lib/validators/formValidators"
+import { EmailCreationRequest } from "@/lib/validators/resendValidator"
 import { toast } from "@/hooks/use-toast"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import { Input } from "@/components/ui/Input"
@@ -64,29 +63,40 @@ function TextAreaInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 
 export default function ContactUs({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width:768px)")
+  const [service, setService] = useState<Array<string>>([])
+
+  const handleCheckboxChange = (value: string) => {
+    // Check if value is already in service array
+    const index = service.indexOf(value)
+
+    if (index !== -1) {
+      // Value is already in the array, remove it
+      const newArray = service.slice() // Create a copy of the array
+      newArray.splice(index, 1) // Remove the value at index
+      setService(newArray)
+    } else {
+      // Value is not in the array, add it
+      setService([...service, value]) // Add value to the end of the array
+    }
+  }
 
   // TANSTACK-HOOK-FORM
   const form = useForm({
     validatorAdapter: zodValidator,
     defaultValues: {
-      from_name: "",
-      from_surname: "",
-      user_email: "",
-      subject: "",
-      message: "",
+      name: "",
+      email: "",
+      website: "",
+      source: "",
+      service: "",
     },
     onSubmit: async ({ value }) => {
-      const payload: FormCreationRequest = {
-        service_id: "service_nwxafir",
-        template_id: "template_rmsb1fd",
-        user_id: "MFnqY65qneeSi6YL0",
-        template_params: {
-          from_name: value.from_name,
-          from_surname: value.from_surname,
-          user_email: value.user_email,
-          subject: value.subject,
-          message: value.message,
-        },
+      const payload: EmailCreationRequest = {
+        name: value.name,
+        email: value.email,
+        website: value.website,
+        source: value.source,
+        service: JSON.stringify(service),
       }
       createEmail(payload)
       console.log("Submit Payload:", payload)
@@ -95,20 +105,23 @@ export default function ContactUs({ setSelectedPage }: Props) {
 
   const { mutate: createEmail } = useMutation({
     mutationFn: async ({
-      service_id,
-      template_id,
-      user_id,
-      template_params,
-    }: FormCreationRequest) => {
-      const payload: FormCreationRequest = {
-        service_id,
-        template_id,
-        user_id,
-        template_params,
+      name,
+      email,
+      website,
+      source,
+      service,
+    }: EmailCreationRequest) => {
+      const payload: EmailCreationRequest = {
+        name,
+        email,
+        website,
+        source,
+        service,
       }
-      await axios.post("https://api.emailjs.com/api/v1.0/email/send", payload)
+      await axios.post("/api/contactUs", payload)
     },
     onError: (error) => {
+      form.reset()
       return toast({
         title: "Something went wrong.",
         description: `Email could not be sent. Please try again.`,
@@ -180,9 +193,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
             >
               <div className="grid grid-cols-2 gap-5">
                 <form.Field
-                  name="from_name"
+                  name="name"
                   validators={{
-                    onChange: fromName,
+                    onChange: name,
                     onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
                     onChangeAsync: onChangeAsync,
                   }}
@@ -208,9 +221,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 </form.Field>
 
                 <form.Field
-                  name="user_email"
+                  name="email"
                   validators={{
-                    onChange: userEmail,
+                    onChange: email,
                     onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
                     onChangeAsync: onChangeAsync,
                   }}
@@ -241,7 +254,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 <form.Field
                   name="website"
                   validators={{
-                    onChange: subject,
+                    onChange: website,
                     onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
                     onChangeAsync: onChangeAsync,
                   }}
@@ -269,7 +282,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 <form.Field
                   name="source"
                   validators={{
-                    onChange: userEmail,
+                    onChange: source,
                     onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
                     onChangeAsync: onChangeAsync,
                   }}
@@ -305,6 +318,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   <div className="items-top flex space-x-2 mb-2">
                     <Checkbox
                       id={item.id}
+                      value={item.name}
+                      onCheckedChange={() => handleCheckboxChange(item.name)}
                       className={` border-2 border-${item.color}-400 data-[state=checked]:text-${item.color}-500`}
                     />
                     <div className="grid gap-1.5 leading-none">
@@ -330,7 +345,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
           </motion.div>
 
           {/* CONTACT DETAILS */}
-          <div className="mt-5 w-full px-20">
+          <div className="mt-10 w-full md:mt-5 md:px-20">
             {/* RIGHT */}
             <motion.div
               className="grid grid-cols-1"
@@ -358,12 +373,12 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 </div>
               </div>
               {isAboveMediumScreens && (
-                <div className="flex w-full pl-16">
-                  <div className="flex relative w-1/2 h-full">
-                    <div className="w-[35vw] max-w-[300px]  flex absolute left-20 z-50">
+                <div className="flex w-full">
+                  <div className="flex relative w-full h-full">
+                    <div className="w-full min-w-[250px] max-w-[300px]  flex absolute left-20 z-50">
                       <Image src={MacBook} alt="macbook" className="flex" />
                     </div>
-                    <div className="w-[30vw] max-w-[300px] flex absolute top-10 -rotate-6">
+                    <div className="w-full min-w-[250px] max-w-[300px] flex absolute top-10 -rotate-6">
                       <div className="w-full h-full overflow-hidden rounded-xl">
                         <Image src={Snippet} alt="snippet" className="flex" />
                       </div>
