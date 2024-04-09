@@ -1,6 +1,7 @@
 import React from "react"
-import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
+
+import { cn } from "@/lib/utils"
 
 const BulletPoint = React.forwardRef<
   HTMLLIElement,

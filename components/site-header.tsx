@@ -1,12 +1,12 @@
+import Image from "next/image"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
+import Twitter from "@/components/assets/twitter-x.svg"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
-import Twitter from "@/components/assets/twitter-x.svg"
-import Image from "next/image"
 
 export function SiteHeader() {
   return (
@@ -21,7 +21,7 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-                <Icons.facebook className="h-5 w-5" />
+              <Icons.facebook className="h-5 w-5" />
             </Link>
             <Link
               className="flex w-10 h-10 bg-white text-zinc-800 rounded-full items-center justify-center"
@@ -29,7 +29,7 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-                <Image src={Twitter} alt="X" className="w-5 h-5"/>
+              <Image src={Twitter} alt="X" className="w-5 h-5" />
             </Link>
             <ThemeToggle />
           </nav>

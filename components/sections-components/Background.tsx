@@ -10,10 +10,8 @@ export default function Background() {
       <div className="flex absolute w-2/5 h-[1000px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-1/4 h-[1000px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-1/4 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent z-20" />
-      
-      
+
       <div className="flex w-full h-full relative z-10 mx-auto">
-        
         {/* LIGHTS */}
         {/* <svg
           width="90%"
@@ -52,7 +50,7 @@ export default function Background() {
             mask="url(#rectOne)"
           />
         </svg> */}
-        
+
         {/* BRICKS */}
         <svg width="90%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>

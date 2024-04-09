@@ -21,34 +21,35 @@ type Props = {
 
 export default function Services({ setSelectedPage }: Props) {
   const style =
-    "w-20 h-20 text-primary p-1 border-2 border-primary rounded-md bg-white shadow-lg"
+    "size-16 text-primary p-1 border-2 border-primary rounded-md bg-white shadow-lg items-center justify-center"
 
   return (
     <section
       id="services"
-      className="z-40 px-10 min-h-screen mx-auto bg-transparent h-auto w-full"
+      className="z-40 md:px-10 md:min-h-screen mx-auto bg-transparent w-full"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="flex relative mx-auto h-auto w-full  p-5 md:p-10"
+        className="flex relative mx-auto h-auto w-full p-5 md:p-10"
       >
         <div className="flex absolute -top-28 -left-10 w-[100vw] h-96 bg-gradient-to-b from-background/0 via-background/80 to-background" />
-        <h1 className="relative z-40 mt-44 text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
+
+        <h1 className="relative z-40 mt-40 text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
           WHAT&apos;S ON{" "}
           <span className="bg-gradient-to-r from-lime-300 via-green-500 to-lime-500 inline-block text-transparent bg-clip-text">
             OFFER
           </span>
         </h1>
-        <h1 className="absolute text-5xl mt-44 text-zinc-400 blur-sm dark:blur-none md:text-6xl font-extrabold leading-tight tracking-tighter">
-          WHAT&apos;S ON OFFER
+        <h1 className="absolute mt-40 text-5xl md:text-6xl text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm">
+          WHAT&apos;S ON <span className="inline-block">OFFER</span>
         </h1>
       </motion.div>
 
-      <div className="grid h-full grid-cols-1 md:grid-cols-2">
+      <div className="grid h-auto grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col pl-5 md:pl-10 w-full items-center gap-5">
           <p>{servicesPage.paragraphOne}</p>
           <p>{servicesPage.paragraphTwo}</p>
-          <div className="grid grid-cols-4 gap-5 w-full mt-10">
+          <div className="flex flex-wrap items-center justify-center gap-5 w-full mt-10">
             <Image src={vercel} alt="vercel" className={`${style}`} />
             <Image src={next} alt="next" className={`${style}`} />
             <Image src={react} alt="react" className={`${style}`} />
@@ -60,7 +61,7 @@ export default function Services({ setSelectedPage }: Props) {
           </div>
         </div>
         <div>
-          <ServicesCard />
+          <ServicesCard setSelectedPage={setSelectedPage} />
         </div>
       </div>
     </section>

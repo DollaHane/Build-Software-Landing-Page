@@ -142,7 +142,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="z-30 mx-auto bg-background min-h-screen w-full p-10"
+      className="z-30 mx-auto bg-background min-h-screen w-full p-2 md:p-10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -165,7 +165,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <p className="text-lg md:text-2xl mt-5">
+          <p className="md:text-xl mt-5">
             For any inquiries or to schedule a consultation, don&apos;t hesitate
             to reach out. Let&apos;s start your journey today!
           </p>
@@ -191,7 +191,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               }}
               className="space-y-8 pt-5"
             >
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <form.Field
                   name="name"
                   validators={{
@@ -250,7 +250,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 </form.Field>
               </div>
 
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <form.Field
                   name="website"
                   validators={{
@@ -358,16 +358,16 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <div className="mb-5 grid w-full grid-cols-1 gap-3">
-                <div className="flex flex-wrap gap-5">
+              <div className="w-full grid grid-cols-1 text-sm md:text-base mb-5 gap-3">
+                <div className="flex gap-5 items-center">
                   <Contact />
                   <p>Shane Hübsch</p>
                 </div>
-                <div className="flex flex-wrap gap-5">
+                <div className="flex gap-5 items-center">
                   <Phone />
                   <p>+27 (0) 60 460 7122</p>
                 </div>
-                <div className="flex flex-wrap gap-5">
+                <div className="flex gap-5 items-center">
                   <AtSign />
                   <p>shane@buidl.co.za</p>
                 </div>

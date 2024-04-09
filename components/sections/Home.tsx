@@ -1,14 +1,11 @@
-import React, { useEffect, useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
+import React, { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
-import Buidl from "@/components/assets/Buidl.png"
 
 import Background from "../sections-components/Background"
-import { Button, buttonVariants } from "../ui/button"
+import { Button } from "../ui/button"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -16,11 +13,13 @@ type Props = {
 
 export default function Home({ setSelectedPage }: Props) {
   const servicesScrollRef = useRef(null)
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress }: any = useScroll({
     target: servicesScrollRef,
     offset: ["start start", "end start"],
   })
   const y = useTransform(scrollYProgress, [0, 1], [0, 1000])
+  const o = useTransform(scrollYProgress, [0, 1], [1, -1])
+  const s = useTransform(scrollYProgress, [0, 1], [1, 0])
 
   return (
     <section
@@ -30,7 +29,7 @@ export default function Home({ setSelectedPage }: Props) {
       <motion.div
         className="w-full z-40"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
-        style={{ y }}
+        style={{ y, opacity: o, scale: s }}
       >
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <div className="flex relative">
@@ -40,45 +39,45 @@ export default function Home({ setSelectedPage }: Props) {
               </span>{" "}
               with a differance.
             </h1>
-            <h1 className="text-[10vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
+            <p className="text-[10vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
               <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
                 BUILD
               </span>{" "}
               with a differance.
-            </h1>
+            </p>
           </div>
-          <p className="max-w-[700px] text-xl text-primary">
+          <h2 className="max-w-[700px] md:text-xl text-primary">
             &quot;Experience a redefined web experience that blends cutting-edge
             technology with artistic flair. We&apos;re a web application
             development studio with a mission to bring you a meaningful
             experience in the digital world.&quot;
-          </p>
+          </h2>
         </div>
         <div className="flex gap-4">
           <AnchorLink
-            className="mt-20"
+            className="mt-10 md:mt-20"
             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
             href={`#${SelectedPage.ContactUs}`}
           >
             <Button className=" font-bold shadow-lg">DEPLOY WITH US</Button>
           </AnchorLink>
         </div>
-        <div className="flex w-full flex-wrap items-center justify-center space-x-8 mx-auto mt-32">
-          <h1 className="mb-5 flex h-10 w-auto items-center text-green-500 border border-green-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
+        <div className="flex w-full text-sm md:text-base flex-wrap items-center justify-center space-x-8 mx-auto mt-10 md:mt-32">
+          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-green-500 border border-green-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             Landing Pages
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center text-cyan-500 border border-cyan-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-cyan-500 border border-cyan-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             Web Applications
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center text-fuchsia-500 border border-fuchsia-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-fuchsia-500 border border-fuchsia-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             Mobile Applications
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center text-red-500 border border-red-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-red-500 border border-red-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             Ecommerce
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center text-orange-500 border border-orange-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-orange-500 border border-orange-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             SaaS
-          </h1>
+          </h3>
         </div>
       </motion.div>
       <Background />
