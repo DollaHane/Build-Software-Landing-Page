@@ -29,9 +29,9 @@ export const checkbox = [
     name: "Update Existing Site / App",
     color: "orange",
   },
-  {
-    id: "social",
-    name: "Online Marketing Management",
-    color: "pink",
-  },
+  // {
+  //   id: "social",
+  //   name: "Online Marketing Management",
+  //   color: "pink",
+  // },
 ]

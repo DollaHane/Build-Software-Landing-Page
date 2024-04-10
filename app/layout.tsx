@@ -8,6 +8,7 @@ import Providers from "@/components/global/Providers"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/theme/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme/theme-provider"
+import { Toaster } from "@/components/ui/Toaster"
 import { GeistSans } from "geist/font/sans"
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
               <TailwindIndicator />
             </Providers>
+            <Toaster/>
           </ThemeProvider>
         </body>
       </html>

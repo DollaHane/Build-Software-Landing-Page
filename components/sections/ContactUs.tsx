@@ -7,7 +7,7 @@ import { useMutation } from "@tanstack/react-query"
 import { zodValidator } from "@tanstack/zod-form-adapter"
 import axios from "axios"
 import { motion } from "framer-motion"
-import { AtSign, Contact, Phone, Send } from "lucide-react"
+import { AtSign, Contact, Loader2, Phone, Send } from "lucide-react"
 
 import { SelectedPage } from "@/types/types"
 import { checkbox } from "@/lib/JSON Files/ContactCheckbox"
@@ -41,19 +41,7 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
   return (
     <>
       {field.state.meta.touchedErrors ? (
-        <em className="absolute top-10 text-xs italic text-yellow-300">
-          {field.state.meta.touchedErrors}
-        </em>
-      ) : null}
-    </>
-  )
-}
-
-function TextAreaInfo({ field }: { field: FieldApi<any, any, any, any> }) {
-  return (
-    <>
-      {field.state.meta.touchedErrors ? (
-        <em className="absolute top-[135px] text-xs italic text-yellow-300">
+        <em className="absolute text-xs italic text-yellow-500">
           {field.state.meta.touchedErrors}
         </em>
       ) : null}
@@ -64,6 +52,7 @@ function TextAreaInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 export default function ContactUs({ setSelectedPage }: Props) {
   const isAboveMediumScreens = useMediaQuery("(min-width:768px)")
   const [service, setService] = useState<Array<string>>([])
+  const [submitted, setSubmitted] = useState<boolean>(false)
 
   const handleCheckboxChange = (value: string) => {
     // Check if value is already in service array
@@ -129,6 +118,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
       })
     },
     onSuccess: () => {
+      setSubmitted(true)
       form.reset()
       return toast({
         title: "Success!",
@@ -148,8 +138,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className="mx-auto mt-16 h-auto w-full bg-backgroundTwo text-zinc-100 p-5 md:p-10 rounded-[5vw] shadow-2xl"
       >
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
-          LET&apos;S GET IN{" "}
+        <h1 className="text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+          Let&apos;s get in{" "}
           <span className="bg-gradient-to-r from-yellow-300 via-amber-500 to-orange-500 inline-block text-transparent bg-clip-text">
             TOUCH
           </span>{" "}
@@ -183,6 +173,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, x: 0 },
             }}
           >
+            {/* @ts-ignore */}
+            {/* <form.Provider> */}
             <form
               onSubmit={(event) => {
                 event.preventDefault()
@@ -272,7 +264,6 @@ export default function ContactUs({ setSelectedPage }: Props) {
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
-                        required
                       />
                       <FieldInfo field={field} />
                     </div>
@@ -301,7 +292,6 @@ export default function ContactUs({ setSelectedPage }: Props) {
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
-                        required
                       />
                       <FieldInfo field={field} />
                     </div>
@@ -320,7 +310,6 @@ export default function ContactUs({ setSelectedPage }: Props) {
                       id={item.id}
                       value={item.name}
                       onCheckedChange={() => handleCheckboxChange(item.name)}
-                      className={` border-2 border-${item.color}-400 data-[state=checked]:text-${item.color}-500`}
                     />
                     <div className="grid gap-1.5 leading-none">
                       <label
@@ -334,14 +323,40 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 ))}
               </div>
 
-              <Button
-                type="submit"
-                variant="outline"
-                className="w-28 font-bold bg-zinc-100 text-zinc-700 border-none transition duration-200 hover:scale-[0.95]"
+              <form.Subscribe
+                // @ts-ignore
+                selector={(state) => [
+                  state.canSubmit,
+                  state.isSubmitting,
+                  state.isSubmitted,
+                  state.errors,
+                ]}
               >
-                <Send />
-              </Button>
+                {/* @ts-ignore */}
+                {([canSubmit, isSubmitting]) =>
+                  !submitted ? (
+                    <Button
+                      type="submit"
+                      variant="outline"
+                      disabled={!canSubmit}
+                      className="w-28 font-bold bg-zinc-100 text-zinc-700 border-none transition duration-200 hover:scale-[0.95]"
+                    >
+                      {isSubmitting ? (
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                      ) : (
+                        <Send />
+                      )}
+                    </Button>
+                  ) : (
+                    <p className="font-bold bg-gradient-to-r from-violet-300 via-pink-300 to-rose-200 animate-pulse italic text-transparent bg-clip-text">
+                      Your new adventure awaits!
+                    </p>
+                  )
+                }
+              </form.Subscribe>
             </form>
+            {/* @ts-ignore */}
+            {/* </form.Provider> */}
           </motion.div>
 
           {/* CONTACT DETAILS */}

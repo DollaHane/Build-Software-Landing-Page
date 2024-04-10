@@ -34,14 +34,14 @@ export default function Services({ setSelectedPage }: Props) {
       >
         <div className="flex absolute -top-28 -left-10 w-[100vw] h-96 bg-gradient-to-b from-background/0 via-background/80 to-background" />
 
-        <h1 className="relative z-40 mt-40 text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
-          WHAT&apos;S ON{" "}
-          <span className="bg-gradient-to-r from-lime-300 via-green-500 to-lime-500 inline-block text-transparent bg-clip-text">
+        <h1 className="relative z-40 mt-40 text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+          What&apos;s on{" "}
+          <span className="bg-gradient-to-r from-lime-500 via-green-500 to-lime-500 inline-block text-transparent bg-clip-text">
             OFFER
           </span>
         </h1>
-        <h1 className="absolute mt-40 text-5xl md:text-6xl text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm">
-          WHAT&apos;S ON <span className="inline-block">OFFER</span>
+        <h1 className="absolute mt-40 text-[10vw] md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
+          What&apos;s on <span className="inline-block">OFFER</span>
         </h1>
       </motion.div>
 

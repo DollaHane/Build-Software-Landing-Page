@@ -37,13 +37,13 @@ export default function Home({ setSelectedPage }: Props) {
               <span className="p-1 bg-gradient-to-r from-violet-500 via-pink-600 to-rose-500 inline-block text-transparent bg-clip-text">
                 BUILD
               </span>{" "}
-              with a differance.
+              software with a differance.
             </h1>
             <p className="text-[10vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
               <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
                 BUILD
               </span>{" "}
-              with a differance.
+              software with a differance.
             </p>
           </div>
           <h2 className="max-w-[700px] md:text-xl text-primary">
@@ -55,14 +55,14 @@ export default function Home({ setSelectedPage }: Props) {
         </div>
         <div className="flex gap-4">
           <AnchorLink
-            className="mt-10 md:mt-20"
+            className="mt-10 md:mt-16"
             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
             href={`#${SelectedPage.ContactUs}`}
           >
             <Button className=" font-bold shadow-lg">DEPLOY WITH US</Button>
           </AnchorLink>
         </div>
-        <div className="flex w-full text-sm md:text-base flex-wrap items-center justify-center space-x-8 mx-auto mt-10 md:mt-32">
+        <div className="flex w-full text-sm md:text-base flex-wrap items-center justify-center space-x-8 mx-auto mt-10 md:mt-16">
           <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-green-500 border border-green-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
             Landing Pages
           </h3>

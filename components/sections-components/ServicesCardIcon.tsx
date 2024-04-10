@@ -6,7 +6,7 @@ interface ServiceCardIconProps {
 }
 
 const styling =
-  "flex w-10 h-10 items-center justify-center rounded-md border-2 border-muted-foreground"
+  "flex w-10 h-10 items-center justify-center rounded-md border-2 border-primary"
 
 export default function ServicesCardIcon({ cardRef }: ServiceCardIconProps) {
   if (cardRef === "App") {
