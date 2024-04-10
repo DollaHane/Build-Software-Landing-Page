@@ -17,7 +17,7 @@ export function SiteHeader() {
           <nav className="flex items-center space-x-5">
             <Link
               className="flex w-10 h-10 bg-white text-zinc-800 rounded-full items-center justify-center"
-              href={siteConfig.links.github}
+              href={siteConfig.links.facebook}
               target="_blank"
               rel="noreferrer"
             >
