@@ -32,16 +32,14 @@ export default function Services({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className="flex relative mx-auto h-auto w-full p-5 md:p-10"
       >
-        <div className="flex absolute -top-28 -left-10 w-[100vw] h-96 bg-gradient-to-b from-background/0 via-background/80 to-background" />
-
-        <h1 className="relative z-40 mt-40 text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
-          What&apos;s on{" "}
+        <h1 className="relative z-40 text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+          Our{" "}
           <span className="bg-gradient-to-r from-lime-500 via-green-500 to-lime-500 inline-block text-transparent bg-clip-text">
-            OFFER
+            SERVICES
           </span>
         </h1>
-        <h1 className="absolute mt-40 text-[10vw] md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
-          What&apos;s on <span className="inline-block">OFFER</span>
+        <h1 className="absolute text-[10vw] md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
+          Our <span className="inline-block">SERVICES</span>
         </h1>
       </motion.div>
 

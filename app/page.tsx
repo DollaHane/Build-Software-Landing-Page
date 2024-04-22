@@ -7,6 +7,7 @@ import { SelectedPage } from "@/types/types"
 import ContactUs from "@/components/sections/ContactUs"
 import Footer from "@/components/sections/Footer"
 import Home from "@/components/sections/Home"
+import Projects from "@/components/sections/Projects"
 import Services from "@/components/sections/Services"
 
 import Buidl from "../assets/Buidl.png"
@@ -45,6 +46,7 @@ export default function IndexPage() {
       <div className="grid w-full grid-cols-1">
         <Home setSelectedPage={setSelectedPage} />
         <Services setSelectedPage={setSelectedPage} />
+        <Projects setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />
         <Footer />
       </div>
