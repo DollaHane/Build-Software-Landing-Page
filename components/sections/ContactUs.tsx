@@ -138,7 +138,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className="mx-auto mt-16 h-auto w-full bg-backgroundTwo text-zinc-100 p-5 md:p-10 rounded-[5vw] shadow-2xl"
       >
-        <h1 className="text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+        <h1 className="text-[10vw] md:text-[5vw] font-extrabold leading-tight tracking-tighter">
           Let&apos;s get in{" "}
           <span className="bg-gradient-to-r from-yellow-300 via-amber-500 to-orange-500 inline-block text-transparent bg-clip-text">
             TOUCH

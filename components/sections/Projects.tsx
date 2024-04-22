@@ -25,13 +25,13 @@ export default function Projects({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         className="flex relative mx-auto h-auto w-full p-5 md:p-10"
       >
-        <h1 className="relative z-40 text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+        <h1 className="relative z-40 text-[10vw] md:text-[5vw] font-extrabold leading-tight tracking-tighter">
           Our{" "}
           <span className="bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 inline-block text-transparent bg-clip-text">
             PROJECTS
           </span>
         </h1>
-        <h1 className="absolute text-[10vw] md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
+        <h1 className="absolute text-[10vw] md:text-[5vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
           Our <span className="inline-block">PROJECTS</span>
         </h1>
       </motion.div>
