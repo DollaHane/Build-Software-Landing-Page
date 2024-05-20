@@ -380,11 +380,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 </div>
                 <div className="flex gap-5 items-center">
                   <Phone />
-                  <p>+27 (0) 60 460 7122</p>
+                  <a href="https://wa.me/0604607122" target="blank">+27 (0) 60 460 7122</a>
                 </div>
                 <div className="flex gap-5 items-center">
                   <AtSign />
-                  <p>shane@buidl.co.za</p>
+                  <a href="mailto:shane@buidl.co.za?subject=Hello!">shane@buidl.co.za</a>
                 </div>
               </div>
               {isAboveMediumScreens && (
