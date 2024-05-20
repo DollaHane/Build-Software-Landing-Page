@@ -8,6 +8,7 @@ import { zodValidator } from "@tanstack/zod-form-adapter"
 import axios from "axios"
 import { motion } from "framer-motion"
 import { AtSign, Contact, Loader2, Phone, Send } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 
 import { SelectedPage } from "@/types/types"
 import { checkbox } from "@/lib/JSON Files/ContactCheckbox"
@@ -379,12 +380,19 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   <p>Shane Hübsch</p>
                 </div>
                 <div className="flex gap-5 items-center">
-                  <Phone />
-                  <a href="https://wa.me/0604607122" target="blank">+27 (0) 60 460 7122</a>
+                  <FaWhatsapp className="w-6 h-6" />
+                  <a
+                    href="https://api.whatsapp.com/send?phone=27604607122&text=Hey%20there%20Shane!"
+                    target="blank"
+                  >
+                    +27 (0) 60 460 7122
+                  </a>
                 </div>
                 <div className="flex gap-5 items-center">
                   <AtSign />
-                  <a href="mailto:shane@buidl.co.za?subject=Hello!">shane@buidl.co.za</a>
+                  <a href="mailto:shane@buidl.co.za?subject=Hello!">
+                    shane@buidl.co.za
+                  </a>
                 </div>
               </div>
               {isAboveMediumScreens && (

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
@@ -15,6 +16,13 @@ export function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-5">
+            <Link
+              className="flex w-10 h-10 bg-white text-zinc-800 rounded-full items-center justify-center"
+              href="https://api.whatsapp.com/send?phone=27604607122&text=Hey%20there%20Shane!"
+              target="_blank"
+            >
+              <FaWhatsapp className="w-6 h-6" />
+            </Link>
             <Link
               className="flex w-10 h-10 bg-white text-zinc-800 rounded-full items-center justify-center"
               href={siteConfig.links.facebook}
