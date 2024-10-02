@@ -76,17 +76,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
     defaultValues: {
       name: "",
       email: "",
-      website: "",
-      source: "",
-      service: "",
     },
     onSubmit: async ({ value }) => {
       const payload: EmailCreationRequest = {
         name: value.name,
         email: value.email,
-        website: value.website,
-        source: value.source,
-        service: JSON.stringify(service),
       }
       createEmail(payload)
       console.log("Submit Payload:", payload)
@@ -94,19 +88,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
   })
 
   const { mutate: createEmail } = useMutation({
-    mutationFn: async ({
-      name,
-      email,
-      website,
-      source,
-      service,
-    }: EmailCreationRequest) => {
+    mutationFn: async ({ name, email }: EmailCreationRequest) => {
       const payload: EmailCreationRequest = {
         name,
         email,
-        website,
-        source,
-        service,
       }
       await axios.post("/api/contactUs", payload)
     },
@@ -137,11 +122,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mx-auto mt-16 h-auto w-full bg-backgroundTwo text-zinc-100 p-5 md:p-10 rounded-[5vw] shadow-2xl"
+        className="mx-auto mt-16 h-auto w-full bg-backgroundTwo text-zinc-100 p-5 md:p-10 rounded-[3vw] shadow-2xl"
       >
         <h1 className="text-[10vw] md:text-[5vw] font-extrabold leading-tight tracking-tighter">
           Let&apos;s get in{" "}
-          <span className="bg-gradient-to-r from-yellow-300 via-amber-500 to-orange-500 inline-block text-transparent bg-clip-text">
+          <span className="bg-gradient-to-br from-violet-400 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
             TOUCH
           </span>{" "}
         </h1>
@@ -184,7 +169,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               }}
               className="space-y-8 pt-5"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 gap-5">
                 <form.Field
                   name="name"
                   validators={{
@@ -195,12 +180,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 >
                   {(field) => (
                     <div className="relative w-full flex-col">
-                      <FieldLabel className="font-bold text-zinc-100">
-                        Name:
-                      </FieldLabel>
                       <Input
                         id={field.name}
-                        placeholder="Thomas Anderson"
+                        placeholder="Name"
                         name={field.name}
                         value={field.state.value}
                         onBlur={field.handleBlur}
@@ -223,12 +205,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 >
                   {(field) => (
                     <div className="relative w-full flex-col">
-                      <FieldLabel className="font-bold text-zinc-100">
-                        Email:
-                      </FieldLabel>
                       <Input
                         type="email"
-                        placeholder="name@domain.com"
+                        placeholder="Email Address"
                         id={field.name}
                         name={field.name}
                         value={field.state.value}
@@ -241,87 +220,6 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     </div>
                   )}
                 </form.Field>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <form.Field
-                  name="website"
-                  validators={{
-                    onChange: website,
-                    onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
-                    onChangeAsync: onChangeAsync,
-                  }}
-                >
-                  {(field) => (
-                    <div className="relative w-full flex-col">
-                      <FieldLabel className="font-bold text-zinc-100">
-                        Existing Website (Optional):
-                      </FieldLabel>
-                      <Input
-                        id={field.name}
-                        placeholder="www.domain.com"
-                        name={field.name}
-                        value={field.state.value}
-                        onBlur={field.handleBlur}
-                        onChange={(e) => field.handleChange(e.target.value)}
-                        className="w-full"
-                      />
-                      <FieldInfo field={field} />
-                    </div>
-                  )}
-                </form.Field>
-
-                <form.Field
-                  name="source"
-                  validators={{
-                    onChange: source,
-                    onChangeAsyncDebounceMs: onChangeAsyncDebounceMs,
-                    onChangeAsync: onChangeAsync,
-                  }}
-                >
-                  {(field) => (
-                    <div className="relative w-full flex-col">
-                      <FieldLabel className="font-bold text-zinc-100">
-                        How did you hear about us?:
-                      </FieldLabel>
-                      <Input
-                        type="text"
-                        placeholder="Eg. Source"
-                        id={field.name}
-                        name={field.name}
-                        value={field.state.value}
-                        onBlur={field.handleBlur}
-                        onChange={(e) => field.handleChange(e.target.value)}
-                        className="w-full"
-                      />
-                      <FieldInfo field={field} />
-                    </div>
-                  )}
-                </form.Field>
-              </div>
-
-              {/* CHECKBOX */}
-              <FieldLabel className="font-bold text-zinc-100">
-                Interested services:
-              </FieldLabel>
-              <div className="relative grid grid-cols-1 md:grid-cols-2">
-                {checkbox.map((item: any) => (
-                  <div className="items-top flex space-x-2 mb-2">
-                    <Checkbox
-                      id={item.id}
-                      value={item.name}
-                      onCheckedChange={() => handleCheckboxChange(item.name)}
-                    />
-                    <div className="grid gap-1.5 leading-none">
-                      <label
-                        htmlFor={item.id}
-                        className={`flex justify-center items-center text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70`}
-                      >
-                        {item.name}
-                      </label>
-                    </div>
-                  </div>
-                ))}
               </div>
 
               <form.Subscribe
@@ -349,13 +247,34 @@ export default function ContactUs({ setSelectedPage }: Props) {
                       )}
                     </Button>
                   ) : (
-                    <p className="font-bold bg-gradient-to-r from-violet-300 via-pink-300 to-rose-200 animate-pulse italic text-transparent bg-clip-text">
-                      Your new adventure awaits!
+                    <p className="font-bold bg-gradient-to-r from-violet-400 via-purple-500 to-pink-500 animate-pulse italic text-transparent bg-clip-text">
+                      We&apos;ll be in touch!
                     </p>
                   )
                 }
               </form.Subscribe>
             </form>
+            <div className="w-full grid grid-cols-1 text-sm md:text-base mt-10 gap-3">
+              <div className="flex gap-5 items-center">
+                <Contact />
+                <p>Shane Hübsch</p>
+              </div>
+              <div className="flex gap-5 items-center">
+                <FaWhatsapp className="w-6 h-6" />
+                <a
+                  href="https://api.whatsapp.com/send?phone=27604607122&text=Hey%20there%20Shane!"
+                  target="blank"
+                >
+                  +27 (0) 60 460 7122
+                </a>
+              </div>
+              <div className="flex gap-5 items-center">
+                <AtSign />
+                <a href="mailto:shane@buidl.co.za?subject=Hello!">
+                  shane@buildsoftware.co.za
+                </a>
+              </div>
+            </div>
             {/* @ts-ignore */}
             {/* </form.Provider> */}
           </motion.div>
@@ -374,27 +293,6 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <div className="w-full grid grid-cols-1 text-sm md:text-base mb-5 gap-3">
-                <div className="flex gap-5 items-center">
-                  <Contact />
-                  <p>Shane Hübsch</p>
-                </div>
-                <div className="flex gap-5 items-center">
-                  <FaWhatsapp className="w-6 h-6" />
-                  <a
-                    href="https://api.whatsapp.com/send?phone=27604607122&text=Hey%20there%20Shane!"
-                    target="blank"
-                  >
-                    +27 (0) 60 460 7122
-                  </a>
-                </div>
-                <div className="flex gap-5 items-center">
-                  <AtSign />
-                  <a href="mailto:shane@buidl.co.za?subject=Hello!">
-                    shane@buidl.co.za
-                  </a>
-                </div>
-              </div>
               {isAboveMediumScreens && (
                 <div className="flex w-full">
                   <div className="flex relative size-full">
@@ -405,9 +303,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
                       <div className="size-full overflow-hidden rounded-xl">
                         <Image src={Snippet} alt="snippet" className="flex" />
                       </div>
-                      <div className="size-full -bottom-1 absolute bg-gradient-to-bl from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
+                      <div className="size-full -bottom-1 absolute bg-gradient-to-bl from-primary/0 via-backgroundTwo/20 to-backgroundTwo" />
                       <div className="size-full -bottom-1 absolute bg-gradient-to-br from-backgroundTwo/0 via-backgroundTwo/0 to-backgroundTwo" />
-                      <div className="size-full absolute bg-gradient-to-b from-backgroundTwo/0 via-backgroundTwo/30 to-backgroundTwo" />
+                      <div className="size-full absolute bg-gradient-to-b from-backgroundTwo/10 via-backgroundTwo/40 to-backgroundTwo" />
                     </div>
                   </div>
                 </div>

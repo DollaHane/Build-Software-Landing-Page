@@ -1,15 +1,15 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/Toaster"
 import Providers from "@/components/global/Providers"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/theme/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme/theme-provider"
-import { Toaster } from "@/components/ui/Toaster"
-import { GeistSans } from "geist/font/sans"
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +35,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning className={`${GeistSans.variable}`}>
+      <html
+        lang="en"
+        suppressHydrationWarning
+        className={`${GeistSans.variable}`}
+      >
         <head />
         <body
           className={cn(
@@ -43,16 +47,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light">
             <Providers>
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
                 <div className="flex-1">{children}</div>
-                
               </div>
               <TailwindIndicator />
             </Providers>
-            <Toaster/>
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>

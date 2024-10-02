@@ -23,6 +23,7 @@ export const servicesCards = [
 ]
 
 export const servicesPage = {
-  paragraphOne: `We craft exceptional digital experiences tailored to your unique needs. Our passion for what we do drives us to deliver innovative solutions that elevate your online presence and drive success. At Buidl, we understand that one size doesn't fit all. That's why we specialize in creating customized solutions that align perfectly with your vision and goals.`,
-  paragraphTwo: `At the heart of our services is a commitment to attention to detail and excellence. We believe that every pixel, line of code, and user interaction matters. Our team of experienced professionals combines creativity with technical expertise to design and develop solutions that stand out in today's competitive digital landscape.`
+  paragraphOne: `We craft exceptional digital experiences tailored to your unique needs. Our passion for what we do drives us to deliver innovative solutions that elevate your online presence and drive success. At Build Software, we understand that one size doesn't fit all. That's why we specialize in creating customised software solutions that align perfectly with your vision and goals.`,
+  paragraphTwo: `At the heart of our services is a commitment to attention to detail and excellence. We believe that every pixel, line of code, and user interaction matters. Our team of experienced professionals combines creativity with technical expertise to design and develop solutions that stand out in today's competitive digital landscape.`,
+  paragraphThree: ``,
 }

@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --backgroundTwo: 0 0% 29%;
+    --backgroundTwo: 0 0% 19%;
     --foreground: 222.2 47.4% 11.2%;
     --bricks: 215.4 16.3% 93.9%;
 
@@ -21,7 +21,7 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 0, 0%, 19%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 240, 5%, 56%;

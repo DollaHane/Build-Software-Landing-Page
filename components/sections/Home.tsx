@@ -1,8 +1,12 @@
 import React, { useRef } from "react"
+import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { useTheme } from "next-themes"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
+import BuilDark from "@/components/assets/Build_Dark.png"
+import BuildLight from "@/components/assets/Build_Light.png"
 
 import Background from "../sections-components/Background"
 import { Button } from "../ui/button"
@@ -12,6 +16,7 @@ type Props = {
 }
 
 export default function Home({ setSelectedPage }: Props) {
+  const theme = useTheme()
   const servicesScrollRef = useRef(null)
   const { scrollYProgress }: any = useScroll({
     target: servicesScrollRef,
@@ -31,53 +36,53 @@ export default function Home({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         style={{ y, opacity: o, scale: s }}
       >
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <div className="flex relative">
-            <h1 className="z-40 text-[10vw] md:text-[6vw] font-extrabold leading-tight tracking-tighter">
-              <span className="p-1 bg-gradient-to-r from-violet-500 via-pink-600 to-rose-500 inline-block text-transparent bg-clip-text">
-                BUILD
+        <div className="flex w-full flex-col items-start gap-5 mt-5">
+          <div className="flex w-full items-center justify-center md:justify-start">
+            <Image
+              src={BuilDark}
+              alt="build-dark"
+              className="hidden dark:block"
+              width={400}
+            />
+            <Image
+              src={BuildLight}
+              alt="build-light"
+              className="dark:hidden"
+              width={400}
+            />
+          </div>
+          <div className="flex relative text-center md:text-left">
+            <h1 className="z-40 text-[8vw] text-primary md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+              Business{" "}
+              <span className="p-1 bg-gradient-to-br from-violet-500 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
+                software
               </span>{" "}
-              software with a differance.
+              solutions
             </h1>
-            <p className="text-[10vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
+            <p className="text-[8vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
+              Business{" "}
               <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
-                BUILD
+                software
               </span>{" "}
-              software with a differance.
+              solutions
             </p>
           </div>
-          <h2 className="max-w-[700px] md:text-xl text-primary">
-            &quot;Experience a redefined web experience that blends cutting-edge
-            technology with artistic flair. We&apos;re a web application
-            development studio with a mission to bring you a meaningful
-            experience in the digital world.&quot;
+          <h2 className="max-w-[900px] text-xl md:text-2xl text-primary text-center md:text-left">
+            &quot;Data-driven cloud solutions tailored to helping small to
+            medium-sized businesses reach their full potential by making te
+            silicon dance to your liking.&quot;
           </h2>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center justify-center">
           <AnchorLink
             className="mt-10 md:mt-16"
             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
             href={`#${SelectedPage.ContactUs}`}
           >
-            <Button className=" font-bold shadow-lg">DEPLOY WITH US</Button>
+            <Button className="font-bold shadow-lg hover:scale-[1.1]">
+              DEPLOY WITH US
+            </Button>
           </AnchorLink>
-        </div>
-        <div className="flex w-full text-sm md:text-base flex-wrap items-center justify-center space-x-8 mx-auto mt-10 md:mt-16">
-          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-green-500 border border-green-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
-            Landing Pages
-          </h3>
-          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-cyan-500 border border-cyan-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
-            Web Applications
-          </h3>
-          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-fuchsia-500 border border-fuchsia-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
-            Mobile Applications
-          </h3>
-          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-red-500 border border-red-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
-            Ecommerce
-          </h3>
-          <h3 className="mb-5 flex h-8 md:h-10 w-auto items-center text-orange-500 border border-orange-500 justify-center rounded-full bg-transparent px-5 font-semibold shadow-lg">
-            SaaS
-          </h3>
         </div>
       </motion.div>
       <Background />
