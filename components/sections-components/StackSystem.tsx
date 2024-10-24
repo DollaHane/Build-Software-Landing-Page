@@ -25,7 +25,7 @@ export default function StackSystem({
   delay,
   repeatDelay,
 }: StackSystemProps) {
-  const style = "size-[48px] absolute text-primary fill-red-500 p-1 border-2 rounded-full bg-white items-center justify-center z-50"
+  const style = "size-[48px] absolute bg-white p-1 border-2 rounded-full bg-white items-center justify-center z-50"
   
 
   const transitionRotation = {
@@ -53,7 +53,7 @@ export default function StackSystem({
           transition={transitionRotation}
           className={`absolute flex ${y} ${x} size-[50px] bg-transparent overflow-hidden rounded-full items-center justify-center`}
         >
-          <div className="flex relative w-full h-full z-30">
+          <div className="flex absolute w-full h-full z-30">
             <motion.div 
                 animate={{rotate: [270, 630], opacity: [0, 1, 0]}}
                 transition={{
@@ -63,10 +63,10 @@ export default function StackSystem({
                   repeatDelay: repeatDelay,
                   delay: delay
                 }}
-              className="flex relative bg-transparent size-full">
-              <motion.div 
-                className="absolute top-0 right-0 size-8 rounded-full bg-gradient-to-b from-violet-200/0 via-violet-500/70 to-purple-500"
-              />
+              className="flex bg-transparent size-full z-30">
+              {/* <motion.div 
+                className="absolute flex top-0 right-0 size-8 rounded-full bg-gradient-to-b from-violet-200/0 via-violet-500/70 to-purple-500"
+              /> */}
             </motion.div>
           </div>
           <Image src={image} alt={alt} className={`${style}`} />
