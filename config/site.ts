@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Buidl",
+  name: "Build Software",
   description:
-    "Experience a redefined web experience that blends cutting-edge technology with artistic flair. Lets elevate your online presence and help you leave a mark in the digital world.",
+    "Data-driven cloud solutions tailored to helping small to medium-sized businesses reach their full potential.",
   mainNav: [
     {
       title: "Home",
