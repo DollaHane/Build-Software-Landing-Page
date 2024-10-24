@@ -1,36 +1,30 @@
 import React from "react"
-import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { SelectedPage } from "@/types/types"
 import { servicesPage } from "@/lib/JSON Files/SiteContent"
-import java from "@/components/assets/java.svg"
-import angular from "@/components/assets/logo-angular-svgrepo-com.svg"
 import sql from "@/components/assets/mysql-1-logo-svg-vector.svg"
 import next from "@/components/assets/nextjs_icon_132160.svg"
 import node from "@/components/assets/node-js-svgrepo-com.svg"
 import react from "@/components/assets/react_icon_196203.svg"
+import StackSystem from "../sections-components/StackSystem"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
 export default function Services({ setSelectedPage }: Props) {
-  const style =
-    "size-20 md:size-28 text-primary p-1 border-2 rounded-md bg-white shadow-lg items-center justify-center"
+
   return (
     <section
       id="services"
-      className="z-40 md:px-10 md:min-h-screen mx-auto bg-transparent w-full"
+      className="z-40 pt-40 md:px-10 min-h-screen mx-auto bg-transparent w-full"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className="flex relative mx-auto h-auto w-full p-5 md:p-10"
       >
         <h1 className="relative z-40 text-[8vw] md:text-[5vw] font-extrabold leading-tight tracking-tighter">
-          Services
-        </h1>
-        <h1 className="absolute text-[8vw] md:text-[5vw] text-zinc-400 font-extrabold leading-tight tracking-tighter blur-sm dark:blur-none">
           Services
         </h1>
       </motion.div>
@@ -41,13 +35,11 @@ export default function Services({ setSelectedPage }: Props) {
             <p>{servicesPage.paragraphOne}</p>
             <p>{servicesPage.paragraphTwo}</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-5 w-full p-5 md:p-0 md:px-5">
-            <Image src={next} alt="next" className={`${style}`} />
-            <Image src={react} alt="react" className={`${style}`} />
-            <Image src={angular} alt="angular" className={`${style}`} />
-            <Image src={java} alt="java" className={`${style}`} />
-            <Image src={node} alt="node" className={`${style}`} />
-            <Image src={sql} alt="sql" className={`${style}`} />
+          <div className="flex relative items-center justify-center gap-5 w-full min-h-[350px] p-5 md:p-0 md:px-5">
+            <StackSystem image={next} alt="next" size="size-[310px]" duration={45} delay={5} repeatDelay={25} y="top-5" x="left-5" z="z-10"/>
+            <StackSystem image={react} alt="react" size="size-[240px]" duration={25} delay={25} repeatDelay={10} y="top-3" x="right-3" z="z-20"/>
+            <StackSystem image={node} alt="node" size="size-[170px]" duration={35} delay={15} repeatDelay={15} y="bottom-0" x="left-0" z="z-30"/>
+            <StackSystem image={sql} alt="sql" size="size-[100px]" duration={40} delay={10} repeatDelay={30} y="-bottom-2" x="-right-2" z="z-40"/>
           </div>
         </div>
       </div>

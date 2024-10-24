@@ -69,8 +69,7 @@ export default function Home({ setSelectedPage }: Props) {
           </div>
           <h2 className="max-w-[900px] text-xl md:text-2xl text-primary text-center md:text-left">
             &quot;Data-driven cloud solutions tailored to helping small to
-            medium-sized businesses reach their full potential by making te
-            silicon dance to your liking.&quot;
+            medium-sized businesses reach their full potential.&quot;
           </h2>
         </div>
         <div className="flex gap-4 items-center justify-center">

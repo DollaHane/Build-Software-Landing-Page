@@ -44,7 +44,7 @@
     --foreground: 213 31% 91%;
     --bricks: 215.4 16.3% 12.9%;
 
-    --muted: 223 47% 11%;
+    --muted: 0 0% 8%;
     --muted-foreground: 240, 4%, 46%;
 
     --accent: 216 34% 17%;
@@ -83,3 +83,8 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+
+
+
+
