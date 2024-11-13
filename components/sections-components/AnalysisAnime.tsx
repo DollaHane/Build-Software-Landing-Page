@@ -7,7 +7,7 @@ export default function AnalysisAnime() {
     <div className="flex w-full items-center justify-center">
       <div className="relative w-64 h-8 flex justify-center items-center">
         {/* BASE NODE */}
-        <div className="w-8 h-8 rounded-full flex absolute top-0 left-0 border-b border-purple-500 bg-gradient-to-br  from-zinc-50 via-zinc-100 to-zinc-200 dark:bg-gradient-to-br dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-900 shadow-md dark:shadow-purple-500/40 z-50" />
+        <div className="w-8 h-8 rounded-full flex absolute top-0 left-0 border-b border-purple-500 bg-gradient-to-br  from-zinc-50 via-zinc-100 to-zinc-200 dark:bg-gradient-to-br dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-900 shadow-md dark:shadow-purple-500/60 z-50" />
 
         {/* ANIMATED LINE FULL */}
         <motion.div
@@ -106,7 +106,7 @@ export default function AnalysisAnime() {
         </div>
 
         <div className="w-[400px] h-[150px] flex absolute z-30">
-          <div className="w-full h-1/2 absolute flex -bottom-0 left-0 z-10 shadow-md dark:shadow-lg dark:shadow-purple-500/40 rounded-2xl" />
+          <div className="w-full h-1/2 absolute flex -bottom-0 left-0 z-10 shadow-md dark:shadow-lg dark:shadow-purple-500/60 rounded-2xl" />
           <div className="w-4/12 h-full absolute flex -bottom-5 -right-5 z-30 bg-background" />
         </div>
       </div>

@@ -372,7 +372,7 @@ export default function BuildAnime() {
         </svg>
       </div>
       <div className="w-[350px] md:w-[500px] h-full flex absolute z-30">
-        <div className="w-full h-1/2 absolute flex -bottom-0 right-0 z-10 shadow-md dark:shadow-lg dark:shadow-purple-500/40 rounded-2xl" />
+        <div className="w-full h-1/2 absolute flex -bottom-0 right-0 z-10 shadow-md dark:shadow-lg dark:shadow-purple-500/60 rounded-2xl" />
         <div className="w-4/12 h-full absolute flex -bottom-5 -left-5 z-30 bg-background" />
       </div>
     </div>

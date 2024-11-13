@@ -61,7 +61,7 @@ export default function AnalyseBuildGrow({ setSelectedPage }: Props) {
               3
             </h3>
             <h3 className="text-[50px] w-full font-semibold z-30">Grow:</h3>
-            <p className="z-30 text-xl">{howPage.paragraphFour}</p>
+            <p className="z-30 text-xl">{howPage.paragraphThree}</p>
           </div>
         </div>
       </div>
