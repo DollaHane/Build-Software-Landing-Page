@@ -25,45 +25,12 @@ export const servicesCards = [
 export const servicesPage = {
   paragraphOne: `We craft exceptional digital experiences tailored to your unique needs. Our passion for what we do drives us to deliver innovative solutions that elevate your online presence and drive success. At Build Software, we understand that one size doesn't fit all. That's why we specialize in creating customised software solutions that align perfectly with your vision and goals.`,
   paragraphTwo: `At the heart of our services is a commitment to attention to detail and excellence. We believe that every pixel, line of code, and user interaction matters. Our team of experienced professionals combines creativity with technical expertise to design and develop solutions that stand out in today's competitive digital landscape.`,
-  paragraphThree: ``,
 }
 
-export const binaryArray = [
-  0, 1, 0, 0, 1, 0, 0, 0, // 01001000 (H)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100001 (a)
-  0, 1, 1, 1, 0, 1, 1, 0, // 01110110 (v)
-  0, 1, 1, 0, 0, 1, 0, 1, // 01100101 (e)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 1, 1, 0, 0, 1, // 01111001 (y)
-  0, 1, 1, 0, 1, 1, 1, 1, // 01101111 (o)
-  0, 1, 1, 1, 0, 1, 0, 1, // 01110101 (u)
-  0, 1, 1, 1, 0, 0, 1, 0, // 01110010 (r)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 0, 0, 1, 0, 0, // 01100100 (d)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100001 (a)
-  0, 1, 1, 1, 0, 1, 1, 0, // 01110110 (v)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100001 (a)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 1, 0, 0, 1, 1, // 01110011 (s)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100001 (a)
-  0, 1, 1, 1, 0, 1, 1, 0, // 01110110 (v)
-  0, 1, 1, 0, 0, 1, 0, 1, // 01100101 (e)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 1, 1, 0, 0, 1, // 01111001 (y)
-  0, 1, 1, 0, 1, 1, 1, 1, // 01101111 (o)
-  0, 1, 1, 1, 0, 1, 0, 1, // 01110101 (u)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 1, 0, 1, 0, 0, // 01110100 (t)
-  0, 1, 1, 0, 1, 0, 0, 1, // 01101001 (i)
-  0, 1, 1, 0, 1, 1, 0, 1, // 01101101 (m)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100101 (e)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 0, 0, 0, 0, 1, // 01100001 (a)
-  0, 1, 1, 1, 0, 1, 1, 0, // 01101110 (n)
-  0, 1, 1, 0, 0, 1, 0, 0, // 01100100 (d)
-  0, 0, 1, 0, 0, 0, 0, 0, // 00100000 (space)
-  0, 1, 1, 0, 1, 1, 0, 1, // 01101101 (m)
-  0, 1, 1, 0, 1, 1, 1, 1, // 01101111 (o)
-  0, 1, 1, 0, 1, 1, 1, 0, // 01101110 (n)
-  0, 1, 1, 0, 0, 1, 0, 1  // 01100101 (e)
-];
+export const howPage = {
+  paragraphOne: `The process starts with an in-depth analysis of your business needs and constraints. This will give us an idea of what tools will need to be implimented in order for your business to achieve it's targets and goals.`,
+  paragraphTwo: `Based on the analysis we'll put a proposal together outlining the project scope quoted `,
+  paragraphThree: `Before we start building your project, a detailed workflow process and wireframe representation of the application is compiled to ensure all aspects of the application are planned for.`,
+  paragraphFour: `The fun can now begin and the application can take shape. Our applications are built using the NEXT JS React Framework connected to a relevant database store suited to the application needs. Our applications are built to industry standards with scalability and security in mind.`,
+  paragraphFive: `The implimentation and production testing process involves ensuring the application efficiently helps achieve your business' unique goals and squashes bottleknecks to success.`,
+}

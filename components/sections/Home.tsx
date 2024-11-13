@@ -1,7 +1,6 @@
 import React, { useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useTheme } from "next-themes"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
@@ -16,7 +15,6 @@ type Props = {
 }
 
 export default function Home({ setSelectedPage }: Props) {
-  const theme = useTheme()
   const servicesScrollRef = useRef(null)
   const { scrollYProgress }: any = useScroll({
     target: servicesScrollRef,
@@ -53,14 +51,12 @@ export default function Home({ setSelectedPage }: Props) {
           </div>
           <div className="flex relative text-center md:text-left">
             <h1 className="z-40 text-[8vw] text-primary md:text-[6vw] font-extrabold leading-tight tracking-tighter">
-              Business{" "}
               <span className="p-1 bg-gradient-to-br from-violet-500 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}
               solutions
             </h1>
             <p className="text-[8vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
-              Business{" "}
               <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}

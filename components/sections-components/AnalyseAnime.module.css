@@ -1,0 +1,7 @@
+.analysePoly {
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.1))
+}
+
+.analysePolyDark {
+  filter: drop-shadow(1px 1px 3px hsla(271 91% 65.1% / 0.4))
+}

@@ -7,9 +7,8 @@ import { SelectedPage } from "@/types/types"
 import ContactUs from "@/components/sections/ContactUs"
 import Footer from "@/components/sections/Footer"
 import Home from "@/components/sections/Home"
-import Services from "@/components/sections/Services"
-
-import Buidl from "../assets/Buidl.png"
+import Introduction from "@/components/sections/Introduction"
+import AnalyseBuildGrow from "@/components/sections/AnalyseBuildGrow"
 
 export default function IndexPage() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -44,9 +43,9 @@ export default function IndexPage() {
     <div className="items-center">
       <div className="grid w-full grid-cols-1">
         <Home setSelectedPage={setSelectedPage} />
-        <Services setSelectedPage={setSelectedPage} />
+        <Introduction setSelectedPage={setSelectedPage} />
+        <AnalyseBuildGrow setSelectedPage={setSelectedPage}/>
         <ContactUs setSelectedPage={setSelectedPage} />
-        <Footer />
       </div>
     </div>
   )

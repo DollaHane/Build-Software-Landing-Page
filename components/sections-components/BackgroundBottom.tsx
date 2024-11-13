@@ -4,56 +4,18 @@ import React from "react"
 
 import styles from "./Backround.module.css"
 
-export default function Background() {
+export default function BackgroundBottom() {
   return (
     <div className="flex absolute top-12 w-8/12 h-[800px] items-center justify-center">
-      <div className="flex absolute w-2/5 h-[1000px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
-      <div className="flex absolute w-1/4 h-[1000px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
+      <div className="flex absolute w-2/5 h-[500px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
+      <div className="flex absolute w-1/4 h-[500px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent z-20" />
-      <div className="flex absolute w-full h-[80px] top-0 bg-gradient-to-b from-background via-background/90 to-transparent z-20" />
+      <div className="flex absolute w-full h-[50px] top-0 bg-gradient-to-b from-background via-background/90 to-transparent z-20" />
 
       <div className="flex w-full h-full relative z-10 mx-auto">
-        {/* LIGHTS
-        <svg
-          width="90%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          className="flex absolute z-40"
-        >
-          <defs>
-            <linearGradient id="gradient">
-              <stop offset="0" stopColor="white" stopOpacity="0" />
-              <stop offset="0.2" stopColor="white" stopOpacity="1" />
-              <stop offset="0.8" stopColor="white" stopOpacity="1" />
-            </linearGradient>
-            <linearGradient id="blue">
-              <stop offset="0" stopColor="#ec4899" stopOpacity="0" />
-              <stop offset="0.2" stopColor="#d946ef" stopOpacity="1" />
-              <stop offset="0.8" stopColor="#a855f7" stopOpacity="1" />
-            </linearGradient>
-            <mask id="rectOne">
-              <rect
-                className={styles.rectOne}
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                fill="url(#gradient)"
-              />
-            </mask>
-          </defs>
-          <path
-            id="zigzag"
-            d="M1270 308 L773 308, 773 340, 672 340, 672 372, 705 372, 705 404, 435 404"
-            stroke="url(#blue)"
-            mask="url(#rectOne)"
-            strokeWidth="4"
-            fill="none"
-          />
-        </svg> */}
 
         {/* BRICKS */}
-        <svg width="90%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <svg width="90%" height="100%" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 flex">
           <defs>
             <clipPath id="clip0_0_1" className=" stroke-white">
               <rect width="1728" height="1117" fill="white" />

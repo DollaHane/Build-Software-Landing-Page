@@ -40,9 +40,9 @@
 
   .dark {
     --background: 0 0% 0.09%;
-    --backgroundTwo: 0 0% 9%;
+    --backgroundTwo: 0 0% 100%;
     --foreground: 213 31% 91%;
-    --bricks: 215.4 16.3% 12.9%;
+    --bricks: 215.4 16.3% 8.9%;
 
     --muted: 0 0% 8%;
     --muted-foreground: 240, 4%, 46%;
