@@ -23,7 +23,6 @@ import { Input } from "@/components/ui/Input"
 
 import BackgroundBottom from "../sections-components/BackgroundBottom"
 import { Button } from "../ui/button"
-import Footer from "./Footer"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -95,23 +94,23 @@ export default function ContactUs({ setSelectedPage }: Props) {
   //____________________________________________________________________________________________________
   // USER INTERFACE
   return (
-    <section id="contactus" className="relative bg-background w-full h-auto">
-      <div className="flex w-full h-full absolute top-40 items-center justify-center z-10">
-        <BackgroundBottom />
-      </div>
+    <section
+      id="contactus"
+      className="relative bg-background h-screen md:max-h-[800px] w-full"
+    >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mx-auto absolute mt-32 h-full w-full p-5 md:p-10 z-50"
+        className="mx-auto absolute top-0 w-full p-5 md:p-10 mt-32 z-40"
       >
-        <h1 className="text-[7vw] md:text-[5vw] text-center leading-tight tracking-tighter z-50">
-          What can we help you{" "}
+        <h1 className="text-[13vw] lg:text-[5vw] text-center leading-tight tracking-tighter z-50">
+          Let&apos;s start{" "}
           <span className="bg-gradient-to-br pr-2 font-semibold from-violet-400 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-            ship
+            shipping
           </span>{" "}
         </h1>
 
         {/* ---------- FORM ---------- */}
-        <div className="mt-16 w-full flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center mt-10 px-2 md:px-10 lg:mt-16">
           <motion.div
             initial="hidden"
             className="w-full lg:w-1/2"
@@ -129,14 +128,14 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 event.stopPropagation()
                 void form.handleSubmit()
               }}
-              className="bg-backgroundTwo/10 w-full border border-transparent dark:border-zinc-700 text-zinc-50 font-mono text-xl p-2 rounded-xl shadow-md dark:shadow-lg dark:shadow-purple-500/30"
+              className="bg-backgroundTwo/10 w-full border border-transparent dark:border-zinc-700 text-zinc-50 font-mono text-xl pt-0 p-2 rounded-xl shadow-md dark:shadow-lg dark:shadow-purple-500/30"
             >
-              <div className="flex gap-3 p-3">
-                <div className="w-5 h-5 rounded-full bg-red-400" />
-                <div className="w-5 h-5 rounded-full bg-yellow-400" />
-                <div className="w-5 h-5 rounded-full bg-green-400" />
+              <div className="flex gap-2 p-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
               </div>
-              <div className="grid grid-cols-1 w-full gap-5 bg-gradient-to-br from-zinc-800 via-zinc-700 to-zinc-600 p-3 rounded-md">
+              <div className="grid grid-cols-1 w-full text-sm gap-10 md:gap-5 bg-gradient-to-br from-zinc-800 via-zinc-700 to-zinc-600 p-3 rounded-md">
                 <p>user@buildsoftware-MBP ~ %</p>
                 <form.Field
                   name="name"
@@ -148,15 +147,16 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 >
                   {(field) => (
                     <div className="flex">
-                      <p className="w-20">Name:</p>
+                      <p className="w-20 flex items-center">Name:</p>
                       <div className="relative w-full flex-col">
                         <Input
                           id={field.name}
                           name={field.name}
+                          placeholder="/"
                           value={field.state.value}
                           onBlur={field.handleBlur}
                           onChange={(e) => field.handleChange(e.target.value)}
-                          className="w-full text-xl"
+                          className="w-full lg:text-lg"
                           required
                         />
                         <FieldInfo field={field} />
@@ -175,16 +175,17 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 >
                   {(field) => (
                     <div className="flex">
-                      <p className="w-20">Email:</p>
+                      <p className="w-20 flex items-center">Email:</p>
                       <div className="relative w-full flex-col">
                         <Input
                           type="email"
                           id={field.name}
                           name={field.name}
+                          placeholder="/"
                           value={field.state.value}
                           onBlur={field.handleBlur}
                           onChange={(e) => field.handleChange(e.target.value)}
-                          className="w-full text-xl"
+                          className="w-full lg:text-lg"
                           required
                         />
                         <FieldInfo field={field} />
@@ -220,14 +221,14 @@ export default function ContactUs({ setSelectedPage }: Props) {
               </div>
             </form>
           </motion.div>
-          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 text-sm md:text-base mt-16 gap-3">
-            <div className="flex gap-5 items-center">
+          <div className="w-full lg:w-full max-w-[650px] grid grid-cols-1 lg:grid-cols-3 text-sm md:text-base mt-10 lg:mt-16 gap-3">
+            <div className="flex gap-2 items-center">
               <div className="relative flex w-6 h-6 items-center justify-center">
                 <Contact className="w-6 h-6" />
               </div>
               <p>Shane Hübsch</p>
             </div>
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-2 items-center">
               <div className="relative flex w-6 h-6 items-center justify-center">
                 <FaWhatsapp className="w-6 h-6" />
               </div>
@@ -238,7 +239,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 +27 (0) 60 460 7122
               </a>
             </div>
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-2 items-center">
               <div className="relative flex w-6 h-6 items-center justify-center">
                 <AtSign className="w-6 h-6" />
               </div>
@@ -248,8 +249,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
             </div>
           </div>
         </div>
-        <Footer />
       </motion.div>
+      <div className="flex w-full h-full absolute top-40 items-center justify-center z-10">
+        <BackgroundBottom />
+      </div>
     </section>
   )
 }

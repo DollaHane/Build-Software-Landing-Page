@@ -35,7 +35,7 @@ export default function Home({ setSelectedPage }: Props) {
         style={{ y, opacity: o, scale: s }}
       >
         <div className="flex w-full flex-col items-start gap-5 mt-5">
-          <div className="flex w-full items-center justify-center md:justify-start">
+          <div className="flex w-full items-center justify-center md:justify-start ">
             <Image
               src={BuilDark}
               alt="build-dark"
@@ -50,13 +50,13 @@ export default function Home({ setSelectedPage }: Props) {
             />
           </div>
           <div className="flex relative text-center md:text-left">
-            <h1 className="z-40 text-[8vw] text-primary md:text-[6vw] font-extrabold leading-tight tracking-tighter">
+            <h1 className="z-40 text-[13vw] text-primary lg:text-[6vw] font-extrabold leading-tight tracking-tighter">
               <span className="p-1 bg-gradient-to-br from-violet-500 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}
               solutions
             </h1>
-            <p className="text-[8vw] absolute blur-sm dark:blur-none md:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
+            <p className="text-[13vw] absolute blur-sm dark:blur-none lg:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
               <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}

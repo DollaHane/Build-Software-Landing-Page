@@ -29,13 +29,13 @@ export default function Introduction({ setSelectedPage }: Props) {
         </h1> */}
       </motion.div>
 
-      <div className="pl-10">
-        <div className="text-[7vw] md:text-[5vw]">
+      <div className="px-10">
+        <div className="text-[8vw] md:text-[5vw]">
           <h3>helping you</h3>
           <h3>improve your business&apos;</h3>
         </div>
-        <div className="text-[15vw] md:text-[10vw]">
-          <h3 className="h-[15vw] md:h-[10vw]">Efficiency</h3>
+        <div className="text-[15vw] lg:text-[10vw]">
+          <h3 className="h-[15vw] lg:h-[10vw]">Efficiency</h3>
           <div className="flex gap-5">
             <h3>&</h3>
             <h3>Growth</h3>
@@ -44,12 +44,12 @@ export default function Introduction({ setSelectedPage }: Props) {
       </div>
 
       <div className="grid h-auto grid-cols-1 py-16">
-        <div className="grid h-auto grid-cols-1 md:grid-cols-2 mt-5">
-          <div className="flex flex-col px-10 text-xl md:px-10 w-full items-center gap-5">
+        <div className="grid h-auto grid-cols-1 lg:grid-cols-2 mt-5">
+          <div className="flex flex-col lg:text-xl px-10 w-full items-center gap-5">
             <p>{servicesPage.paragraphOne}</p>
             <p>{servicesPage.paragraphTwo}</p>
           </div>
-          <div className="flex relative items-center justify-center gap-5 w-full min-h-[350px] p-5 md:p-0 md:px-5 mt-16 md:mt-0">
+          <div className="flex relative items-center justify-center gap-5 w-full min-h-[350px] p-5 md:p-0 md:px-5 mt-16 lg:mt-0">
             <StackSystem
               image={next}
               alt="next"

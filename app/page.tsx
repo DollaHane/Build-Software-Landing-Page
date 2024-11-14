@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react"
 import Lenis from "@studio-freight/lenis"
 
 import { SelectedPage } from "@/types/types"
+import AnalyseBuildGrow from "@/components/sections/AnalyseBuildGrow"
 import ContactUs from "@/components/sections/ContactUs"
 import Footer from "@/components/sections/Footer"
 import Home from "@/components/sections/Home"
 import Introduction from "@/components/sections/Introduction"
-import AnalyseBuildGrow from "@/components/sections/AnalyseBuildGrow"
 
 export default function IndexPage() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -44,8 +44,9 @@ export default function IndexPage() {
       <div className="grid w-full grid-cols-1">
         <Home setSelectedPage={setSelectedPage} />
         <Introduction setSelectedPage={setSelectedPage} />
-        <AnalyseBuildGrow setSelectedPage={setSelectedPage}/>
+        <AnalyseBuildGrow setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />
+        <Footer />
       </div>
     </div>
   )

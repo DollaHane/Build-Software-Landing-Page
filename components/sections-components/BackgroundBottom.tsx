@@ -6,16 +6,20 @@ import styles from "./Backround.module.css"
 
 export default function BackgroundBottom() {
   return (
-    <div className="flex absolute top-12 w-8/12 h-[800px] items-center justify-center">
-      <div className="flex absolute w-2/5 h-[500px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
-      <div className="flex absolute w-1/4 h-[500px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
+    <div className="flex absolute top-12 w-8/12 h-[700px] items-center justify-center">
+      <div className="flex absolute w-2/5 h-[600px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
+      <div className="flex absolute w-1/4 h-[600px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-[50px] top-0 bg-gradient-to-b from-background via-background/90 to-transparent z-20" />
 
       <div className="flex w-full h-full relative z-10 mx-auto">
-
         {/* BRICKS */}
-        <svg width="90%" height="100%" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 flex">
+        <svg
+          width="90%"
+          height="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute top-0 flex"
+        >
           <defs>
             <clipPath id="clip0_0_1" className=" stroke-white">
               <rect width="1728" height="1117" fill="white" />
