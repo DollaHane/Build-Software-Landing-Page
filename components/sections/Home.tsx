@@ -9,6 +9,7 @@ import BuildLight from "@/components/assets/Build_Light.png"
 
 import Background from "../sections-components/Background"
 import { Button } from "../ui/button"
+import { Typewriter } from "../ui/typewriter"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -56,17 +57,27 @@ export default function Home({ setSelectedPage }: Props) {
               </span>{" "}
               solutions
             </h1>
-            <p className="text-[13vw] absolute blur-sm dark:blur-none lg:text-[6vw] text-zinc-400 font-extrabold leading-tight tracking-tighter">
-              <span className="bg-zinc-400 p-1 inline-block text-transparent bg-clip-text">
+            <p className="text-[13vw] absolute blur-sm dark:blur-md lg:text-[6vw] text-zinc-400 dark:text-zinc-800 font-extrabold leading-tight tracking-tighter">
+              <span className="bg-zinc-400 dark:bg-zinc-800 p-1 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}
               solutions
             </p>
           </div>
-          <h2 className="max-w-[900px] text-xl md:text-2xl text-primary text-center md:text-left">
-            &quot;Data-driven cloud solutions tailored to helping small to
-            medium-sized businesses reach their full potential.&quot;
+          <h2 className="hidden">
+            Data-driven cloud solutions tailored to helping small to
+            medium-sized businesses reach their full potential.
           </h2>
+          <Typewriter
+            text={[
+              `"Data-driven cloud solutions tailored to helping small to medium-sized businesses reach their full potential."`,
+            ]}
+            speed={30}
+            className="max-w-[900px] min-h-16 text-xl md:text-2xl text-primary text-center md:text-left"
+            waitTime={1500}
+            deleteSpeed={40}
+            cursorChar={"_"}
+          />
         </div>
         <div className="flex gap-4 items-center justify-center">
           <AnchorLink
