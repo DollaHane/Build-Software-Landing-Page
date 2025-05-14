@@ -76,7 +76,6 @@ export const WavyBackground = ({
     "#e879f9",
   ]
 
-  const [bg, setBg] = useState<string>("")
   const drawWave = (n: number) => {
     nt += getSpeed()
     for (i = 0; i < n; i++) {
@@ -92,14 +91,10 @@ export const WavyBackground = ({
     }
   }
 
-  let bgStyle = window
-    .getComputedStyle(document.documentElement)
-    .getPropertyValue("--bricks")
   let animationId: number
   const render = () => {
     ctx.fillStyle =
       theme === "light" ? "hsl(215.4 16.3% 97.9%)" : "hsl(215.4 16.3% 6.3%)"
-    ctx.fillStyle = bgStyle
     ctx.globalAlpha = waveOpacity || 0.5
     ctx.fillRect(0, 0, w, h)
     drawWave(5)
