@@ -72,7 +72,7 @@ export default function Home({ setSelectedPage }: Props) {
             text={[
               `"Data-driven cloud solutions tailored to helping small to medium-sized businesses reach their full potential."`,
             ]}
-            speed={30}
+            speed={20}
             className="max-w-[900px] min-h-16 text-xl md:text-2xl text-primary text-center md:text-left"
             waitTime={1500}
             deleteSpeed={40}

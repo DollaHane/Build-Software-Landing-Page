@@ -106,7 +106,7 @@ export const WavyBackground = ({
     return () => {
       cancelAnimationFrame(animationId)
     }
-  }, [theme])
+  }, [])
 
   const [isSafari, setIsSafari] = useState(false)
   useEffect(() => {

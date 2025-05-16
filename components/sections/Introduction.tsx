@@ -9,6 +9,7 @@ import node from "@/components/assets/node-js-svgrepo-com.svg"
 import react from "@/components/assets/react_icon_196203.svg"
 
 import StackSystem from "../sections-components/StackSystem"
+import { TextRotate } from "../ui/text-rotate"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -30,16 +31,41 @@ export default function Introduction({ setSelectedPage }: Props) {
       </motion.div>
 
       <div className="px-10">
-        <div className="text-[8vw] md:text-[5vw]">
+        <div className="text-[5vw] md:text-[3vw]">
           <h3>helping you</h3>
           <h3>improve your business&apos;</h3>
         </div>
-        <div className="text-[15vw] lg:text-[10vw]">
-          <h3 className="h-[15vw] lg:h-[10vw]">Efficiency</h3>
+        <div className="text-[12vw] lg:text-[8vw]">
+          <h3 className="h-[12vw] lg:h-[8vw]">Efficiency</h3>
           <div className="flex gap-5">
             <h3>&</h3>
             <h3>Growth</h3>
           </div>
+        </div>
+        <div className="text-[5vw] md:text-[3vw]">
+          <h3>with tailored software that</h3>
+          <h3 className="flex flex-wrap gap-3">
+            <span>manages your</span>
+            <TextRotate
+              texts={[
+                "MARKETING",
+                "SALES",
+                "PROJECTS",
+                "TASKS",
+                "FORECASTING",
+                "TEAM",
+              ]}
+              mainClassName="text-white px-2 sm:px-2 font-bold md:px-3 bg-gradient-to-br from-violet-500 via-violet-600 to-purple-500 overflow-hidden justify-center shadow-lg rounded-xl"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 200 }}
+              rotationInterval={4000}
+            />
+          </h3>
         </div>
       </div>
 
