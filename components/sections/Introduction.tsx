@@ -55,14 +55,10 @@ export default function Introduction({ setSelectedPage }: Props) {
                 "FORECASTING",
                 "TEAM",
               ]}
-              mainClassName="text-white px-2 sm:px-2 font-bold md:px-3 bg-gradient-to-br from-violet-500 via-violet-600 to-purple-500 overflow-hidden justify-center shadow-lg rounded-xl"
+              mainClassName="text-white text-violet-500 font-bold bg-transparent overflow-hidden justify-center"
               staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
               staggerDuration={0.025}
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 200 }}
               rotationInterval={4000}
             />
           </h3>

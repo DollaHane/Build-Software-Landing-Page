@@ -1,13 +1,8 @@
 import React from "react"
-import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { SelectedPage } from "@/types/types"
 import { howPage } from "@/lib/JSON Files/SiteContent"
-import Wireframe from "@/components/assets/wireframe.svg"
-
-import AnalysisAnime from "../sections-components/AnalysisAnime"
-import BuildAnime from "../sections-components/BuildAnime"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -21,8 +16,10 @@ export default function AnalyseBuildGrow({ setSelectedPage }: Props) {
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="flex relative mx-auto w-full p-5 md:p-10"
       ></motion.div>
+
+      {/* <div className="w-full pb-10 flex items-center justify-center ">
+      </div> */}
 
       <div className="grid h-auto grid-cols-1 gap-28">
         <div className="flex flex-col w-full items-start justify-center h-auto mt-5">
@@ -33,11 +30,6 @@ export default function AnalyseBuildGrow({ setSelectedPage }: Props) {
             <h3 className="text-[50px] w-full font-semibold z-30">Analyse:</h3>
             <p className="z-30 lg:text-xl">{howPage.paragraphOne}</p>
           </div>
-          <div className="w-1/2 relative lg:h-[300px] flex items-center justify-center ">
-            <div className="w-1/2 p-2 hidden lg:block">
-              <AnalysisAnime />
-            </div>
-          </div>
         </div>
 
         <div className="flex flex-col w-full items-center justify-center h-auto mt-5">
@@ -47,11 +39,6 @@ export default function AnalyseBuildGrow({ setSelectedPage }: Props) {
             </h3>
             <h3 className="text-[50px] w-full font-semibold z-30">Build:</h3>
             <p className="z-30 lg:text-xl">{howPage.paragraphTwo}</p>
-          </div>
-          <div className="w-1/2 relative flex items-center justify-center pt-10 md:p-10">
-            <div className="w-1/2 p-2">
-              <BuildAnime />
-            </div>
           </div>
         </div>
 

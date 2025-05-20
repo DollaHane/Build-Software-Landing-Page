@@ -7,9 +7,8 @@ import { SelectedPage } from "@/types/types"
 import BuilDark from "@/components/assets/Build_Dark.png"
 import BuildLight from "@/components/assets/Build_Light.png"
 
-import Background from "../sections-components/Background"
+import BackgroundTwo from "../sections-components/BackgroundTwo"
 import { Button } from "../ui/button"
-import { Typewriter } from "../ui/typewriter"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -28,7 +27,7 @@ export default function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="container min-h-screen grid gap-6 pt-5 md:p-16 z-40"
+      className="container w-full min-h-screen grid gap-6 pt-5 md:p-16 z-40"
     >
       <motion.div
         className="w-full z-40"
@@ -64,20 +63,10 @@ export default function Home({ setSelectedPage }: Props) {
               solutions
             </p>
           </div>
-          <h2 className="hidden">
+          <h2 className="max-w-[900px] min-h-16 text-xl md:text-2xl text-primary text-center md:text-left">
             Data-driven cloud solutions tailored to helping small to
             medium-sized businesses reach their full potential.
           </h2>
-          <Typewriter
-            text={[
-              `"Data-driven cloud solutions tailored to helping small to medium-sized businesses reach their full potential."`,
-            ]}
-            speed={20}
-            className="max-w-[900px] min-h-16 text-xl md:text-2xl text-primary text-center md:text-left"
-            waitTime={1500}
-            deleteSpeed={40}
-            cursorChar={"_"}
-          />
         </div>
         <div className="flex gap-4 items-center justify-center">
           <AnchorLink
@@ -91,7 +80,7 @@ export default function Home({ setSelectedPage }: Props) {
           </AnchorLink>
         </div>
       </motion.div>
-      <Background />
+      <BackgroundTwo />
     </section>
   )
 }

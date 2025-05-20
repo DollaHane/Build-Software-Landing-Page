@@ -1,8 +1,7 @@
-import { Resend } from "resend"
+import { Nodemail } from "@/server/mail/mail"
+import { render } from "@react-email/components"
 
 import { buidlMail } from "@/components/emailTemplates/buidlMail"
-
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
   try {
@@ -11,22 +10,26 @@ export async function POST(req: Request) {
     const { name, email, website, source, service } = body
 
     try {
-      const { data } = await resend.emails.send({
-        from: "Ground Control To Major Tom.. <shane@buidl.co.za>",
-        to: "shane@buidl.co.za",
-        subject: "Message from the Buidl site!",
-        react: buidlMail({
+      const template = await render(
+        buidlMail({
           name: name,
           email: email,
           website: website,
           source: source,
           service: service,
-        }) as React.ReactElement,
-      })
+        }) as React.ReactElement
+      )
 
-      console.log("Successfully sent email:", data)
+      await Nodemail({
+        recipient: process.env.MAIL_USER!,
+        sender: process.env.MAIL_USER!,
+        subject: `Message from the BuildSoftware site!`,
+        template: template,
+      })
+      console.log(`Successfully sent email`)
     } catch (error) {
-      console.error("Failed to send email:", error)
+      console.error(`Failed to send email`)
+      return new Response(`Failed to send email`, { status: 500 })
     }
 
     return new Response("Successfully sent email:", { status: 200 })
