@@ -27,7 +27,7 @@ export default function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="container w-full min-h-screen grid gap-6 pt-5 md:p-16 z-40"
+      className="container min-h-screen grid gap-6 pt-5 md:p-16 z-40"
     >
       <motion.div
         className="w-full z-40"

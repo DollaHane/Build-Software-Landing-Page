@@ -6,13 +6,13 @@ import WaveBackground from "./WaveBackground"
 
 export default function BackgroundTwo() {
   return (
-    <div className="flex absolute top-12 left-0 w-full h-[800px] items-center justify-center">
+    <div className="flex absolute top-0 left-0 w-full h-[800px] items-center justify-center">
       <div className="flex absolute w-2/5 h-[1000px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-2/5 h-[1000px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-[80px] top-0 bg-gradient-to-b from-background via-background/90 to-transparent z-20" />
 
-      <div className="flex w-full h-full relative bg-bricks z-10 mx-auto overflow-hidden">
+      <div className="flex w-full h-full bg-bricks justify-center z-10 mx-auto overflow-hidden">
         <WaveBackground />
         {/* BRICKS */}
         <svg
@@ -21,7 +21,7 @@ export default function BackgroundTwo() {
           viewBox="0 0 1406 717"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-0 left-0 w-full"
+          className="absolute top-0"
         >
           <path
             d="M0 5C0 2.23858 2.23858 0 5 0H52C54.7614 0 57 2.23858 57 5V22C57 24.7614 54.7614 27 52 27H5C2.23858 27 0 24.7614 0 22V5Z"
