@@ -7,7 +7,7 @@ import { SelectedPage } from "@/types/types"
 import BuilDark from "@/components/assets/Build_Dark.png"
 import BuildLight from "@/components/assets/Build_Light.png"
 
-import BackgroundTwo from "../sections-components/BackgroundTwo"
+import Background from "../sections-components/Background"
 import { Button } from "../ui/button"
 
 type Props = {
@@ -80,7 +80,7 @@ export default function Home({ setSelectedPage }: Props) {
           </AnchorLink>
         </div>
       </motion.div>
-      <BackgroundTwo />
+      <Background />
     </section>
   )
 }

@@ -102,11 +102,12 @@ export default function ContactUs({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className="mx-auto absolute top-0 w-full p-5 md:p-10 mt-32 z-40"
       >
-        <h1 className="text-[13vw] lg:text-[5vw] text-center leading-tight tracking-tighter z-50">
-          Let&apos;s start{" "}
+        <h1 className="text-[8vw] lg:text-[5vw] text-center leading-tight tracking-tighter z-50">
+          Start{" "}
           <span className="bg-gradient-to-br pr-2 font-semibold from-violet-400 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
             shipping
           </span>{" "}
+          today
         </h1>
 
         {/* ---------- FORM ---------- */}
@@ -128,7 +129,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 event.stopPropagation()
                 void form.handleSubmit()
               }}
-              className="bg-backgroundTwo/10 w-full border border-transparent dark:border-zinc-700 text-zinc-50 font-mono text-xl pt-0 p-2 rounded-xl shadow-md dark:shadow-lg dark:shadow-purple-500/30"
+              className="bg-backgroundTwo/10 w-full border border-transparent dark:border-zinc-700 text-zinc-50 font-mono text-xl pt-0 p-2 rounded-xl shadow-md dark:shadow-lg"
             >
               <div className="flex gap-2 p-2">
                 <div className="w-3 h-3 rounded-full bg-red-400" />
@@ -250,7 +251,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
           </div>
         </div>
       </motion.div>
-      <div className="flex w-full h-full absolute top-40 items-center justify-center z-10">
+      <div className="flex w-full h-full absolute top-40 items-center justify-center z-10 overflow-hidden">
         <BackgroundBottom />
       </div>
     </section>
