@@ -6,7 +6,7 @@ import WaveBackground from "./WaveBackground"
 
 export default function BackgroundBottom() {
   return (
-    <div className="flex absolute top-0 left-0 w-full h-[800px] items-center justify-center">
+    <div className="flex absolute top-0 left-0 w-full h-[800px] overflow-clip items-center justify-center">
       <div className="flex absolute w-2/5 h-[1000px] top-0 left-0 bg-gradient-to-r from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-2/5 h-[1000px] top-0 right-0 bg-gradient-to-l from-background via-background/90 to-transparent z-20" />
       <div className="flex absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent z-20" />
