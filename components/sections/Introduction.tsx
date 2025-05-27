@@ -45,8 +45,8 @@ export default function Introduction({ setSelectedPage }: Props) {
         <div className="text-[5vw] md:text-[3vw]">
           <h3>with tailored software that</h3>
           <h3 className="flex flex-wrap gap-3">
-            <span>manages your</span>
-            <TextRotate
+            <span>suites your needs.</span>
+            {/* <TextRotate
               texts={[
                 "MARKETING",
                 "SALES",
@@ -60,7 +60,7 @@ export default function Introduction({ setSelectedPage }: Props) {
               staggerDuration={0.025}
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
               rotationInterval={4000}
-            />
+            /> */}
           </h3>
         </div>
       </div>
