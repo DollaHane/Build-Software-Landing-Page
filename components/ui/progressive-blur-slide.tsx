@@ -35,7 +35,7 @@ export function InfiniteSlider({
     if (width === 0 && direction === "horizontal") return // Skip if no width
     if (height === 0 && direction === "vertical") return // Skip if no height
 
-    let controls
+    let controls: any
     const size = direction === "horizontal" ? width : height
     const contentSize = size + gap
     const from = reverse ? -contentSize / 2 : 0
