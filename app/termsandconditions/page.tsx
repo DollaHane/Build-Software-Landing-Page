@@ -5,7 +5,7 @@ import logo from "@/components/assets/Buidl.png"
 
 export default function TermsAndConditions() {
   return (
-    <section className="relative z-40">
+    <section className="relative z-40 font-mono">
       <div className="flex justify-between p-5">
         <a href="/">
           <p>Return to the home page.</p>
@@ -18,31 +18,30 @@ export default function TermsAndConditions() {
         <p className="italic">Last updated September 05, 2023</p>
         <h1 className="text-lg font-bold">AGREEMENT TO OUR LEGAL TERMS</h1>
         <p>
-          We are Buidl.co.za (&apos;Company&apos;, &apos;we&apos;,
+          We are Build Software (&apos;Company&apos;, &apos;we&apos;,
           &apos;us&apos;, or &apos;our&apos;), a company registered in South
           Africa at 36 Neethling Close, Kunene Park, Port Elizabeth, East Cape
           6025. Our VAT number is 4770293936.
         </p>
         <p>
-          We operate the website https://www.buidl.co.za (the &apos;Site&apos;),
-          as well as any other related products and services that refer or link
-          to these legal terms (the &apos;Legal Terms&apos;) (collectively, the
-          &apos;Services&apos;).
+          We operate the website https://www.buildsoftware.co.za (the
+          &apos;Site&apos;), as well as any other related products and services
+          that refer or link to these legal terms (the &apos;Legal Terms&apos;)
+          (collectively, the &apos;Services&apos;).
         </p>
         <p>
           You can contact us by phone at +27 (0)60 320 7122, email at
-          shane@buidl.co.za, or by mail to 36 Neethling Close, Kunene Park, Port
-          Elizabeth, East Cape 6025, South Africa.
+          shane@buildsoftware.co.za, or by mail to 36 Neethling Close, Kunene
+          Park, Port Elizabeth, East Cape 6025, South Africa.
         </p>
         <p>
           These Legal Terms constitute a legally binding agreement made between
           you, whether personally or on behalf of an entity (&apos;you&apos;),
-          and Silan Industries Pty (Ltd), concerning your access to and use of
-          the Services. You agree that by accessing the Services, you have read,
-          understood, and agreed to be bound by all of these Legal Terms. IF YOU
-          DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY
-          PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE
-          IMMEDIATELY.
+          and Build Software, concerning your access to and use of the Services.
+          You agree that by accessing the Services, you have read, understood,
+          and agreed to be bound by all of these Legal Terms. IF YOU DO NOT
+          AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED
+          FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
         </p>
         <p>
           Supplemental terms and conditions or documents that may be posted on
@@ -693,12 +692,12 @@ export default function TermsAndConditions() {
           at:
         </p>
         <ul className="list-disc pl-10">
-          <li>Buidl.co.za</li>
+          <li>Build Software</li>
           <li>36 Neethling Close</li>
           <li>Kunene Park</li>
           <li>Port Elizabeth, East Cape 6025 South Africa</li>
           <li>Phone: +27 (0)60 320 7122</li>
-          <li>shane@buidl.co.za</li>
+          <li>shane@buildsoftware.co.za</li>
         </ul>
         <a className="italic text-slate-400" href="#top">
           Back to the top
