@@ -1,8 +1,12 @@
-import React from "react"
+"use client"
+
+import React, { useEffect, useState } from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { SelectedPage } from "@/types/types"
 import { servicesPage } from "@/lib/JSON Files/SiteContent"
+import FigmaLaunchPng from "@/components/assets/graphics/Figma-Launch.png"
 
 import FigmaLaunch from "../sections-components/Figma-Launch"
 import OrganisationSlide from "../sections-components/OrganisationSlide"
@@ -12,6 +16,21 @@ type Props = {
 }
 
 export default function Introduction({ setSelectedPage }: Props) {
+  const [isSafari, setIsSafari] = useState(false)
+
+  useEffect(() => {
+    // This runs only on the client after mount
+    const userAgent = navigator.userAgent
+    let isSafariBrowser = userAgent.includes("Safari")
+    let isChromeBrowser = userAgent.includes("Chrome")
+
+    if (isChromeBrowser && isSafariBrowser) {
+      isSafariBrowser = false
+    }
+
+    setIsSafari(isSafariBrowser)
+  }, [])
+
   return (
     <section
       id="services"
@@ -48,7 +67,13 @@ export default function Introduction({ setSelectedPage }: Props) {
           <p>{servicesPage.paragraphTwo}</p>
         </div>
       </div>
-      <FigmaLaunch />
+      {isSafari ? (
+        <div className="w-10/12 lg:w-2/3 mx-auto">
+          <Image src={FigmaLaunchPng} alt="design-developement-deployment" />
+        </div>
+      ) : (
+        <FigmaLaunch />
+      )}
     </section>
   )
 }

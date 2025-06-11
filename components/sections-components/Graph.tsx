@@ -5,9 +5,9 @@ import { ProgressiveBlur } from "../ui/progressive-blur"
 export default function Graph() {
   return (
     <div className="relative flex h-min md:mt-16 w-full max-w-[500px]">
-      <div className="w-1/4 h-[400px] absolute flex bg-gradient-to-r from-background to-background/0 top-0 left-0 z-20" />
-      <div className="w-1/4 h-[400px] absolute flex bg-gradient-to-l from-background to-background/0 top-0 right-0 z-20" />
-      <div className="w-full h-[100px] absolute flex bg-gradient-to-t from-background to-background/0 bottom-0 mx-auto z-20" />
+      <div className="w-2/4 h-[400px] absolute flex bg-gradient-to-r from-background via-background/50 to-background/0 top-0 -left-0 z-20" />
+      <div className="w-2/4 h-[400px] absolute flex bg-gradient-to-l from-background via-background/50 to-background/0 top-0 -right-0 z-20" />
+      <div className="w-full h-[150px] absolute flex bg-gradient-to-t from-background via-background/50 to-background/0 bottom-0 mx-auto z-20" />
       <ProgressiveBlur
         className="pointer-events-none z-20 absolute top-0 -left-5 h-full w-4/12"
         direction="left"
@@ -59,13 +59,13 @@ export default function Graph() {
             data-figma-bg-blur-radius="50"
             d="M112.422 394.958C53.9537 388.612 0 294.757 0 294.757V546.483H982.466V212.884C982.466 212.884 921.859 232.261 879.821 212.884C842.728 195.788 830.173 151.214 791.839 137.122C707.612 106.16 750.012 351.705 663.531 327.75C624.723 317 663.531 260.541 585.325 260.541C547.695 260.541 534.738 208.681 497.343 212.884C432.43 220.181 483.901 350.716 353.15 347.301C302.732 345.985 299.594 279.957 249.283 276.427C177.538 271.393 183.923 402.719 112.422 394.958Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
           <g filter="url(#filter1_d_147_2)">
             <path
               d="M-7.33154 284.72C-7.33154 284.72 53.954 388.612 112.422 394.958C183.923 402.719 177.538 271.393 249.283 276.427C299.595 279.957 302.732 345.985 353.151 347.301C483.902 350.716 432.43 220.181 497.343 212.884C534.738 208.681 547.695 260.541 585.325 260.541C663.532 260.541 624.723 317 663.532 327.75C750.012 351.705 707.613 106.16 791.839 137.122C830.173 151.214 842.729 195.788 879.821 212.884C921.86 232.261 988.577 210.179 988.577 210.179"
               stroke="#8E50EC"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </g>
         </g>
@@ -223,8 +223,8 @@ export default function Graph() {
           x2="560"
           y2="91"
           stroke="url(#paint1_linear_147_2)"
-          stroke-width="2"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          strokeDasharray="4 4"
         />
         <line
           x1="484"
@@ -232,8 +232,8 @@ export default function Graph() {
           x2="484"
           y2="169"
           stroke="url(#paint2_linear_147_2)"
-          stroke-width="2"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          strokeDasharray="4 4"
         />
         <g filter="url(#filter2_d_147_2)">
           <path
@@ -247,14 +247,14 @@ export default function Graph() {
           <path
             d="M514.558 120.562L529.649 135.655M493.623 98.0918C493.409 98.0015 493.173 97.9771 492.945 98.0218C492.717 98.0664 492.507 98.1781 492.342 98.3425C492.178 98.507 492.066 98.7167 492.022 98.9449C491.977 99.1731 492.001 99.4094 492.092 99.6237L507.385 137.271C507.479 137.499 507.642 137.692 507.851 137.822C508.06 137.952 508.305 138.014 508.551 137.997C508.797 137.981 509.032 137.889 509.222 137.732C509.412 137.576 509.549 137.364 509.613 137.126L513.304 122.811C513.501 121.976 513.922 121.21 514.522 120.596C515.123 119.983 515.88 119.545 516.711 119.331L531.119 115.616C531.358 115.553 531.572 115.418 531.73 115.227C531.887 115.037 531.981 114.802 531.997 114.555C532.014 114.308 531.952 114.063 531.821 113.853C531.69 113.643 531.496 113.48 531.267 113.387L493.623 98.0918Z"
             className="stroke-primary"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <g filter="url(#filter3_d_147_2)">
           <circle cx="484" cy="218" r="8" fill="#8E50EC" />
-          <circle cx="484" cy="218" r="7" stroke="#FEFEFE" stroke-width="2" />
+          <circle cx="484" cy="218" r="7" stroke="#FEFEFE" strokeWidth="2" />
         </g>
         <g filter="url(#filter4_d_147_2)">
           <rect
@@ -272,7 +272,7 @@ export default function Graph() {
             height="49"
             rx="9"
             stroke="#DBDBDB"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </g>
         <path
@@ -297,9 +297,9 @@ export default function Graph() {
             width="1038.26"
             height="304.873"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -332,9 +332,9 @@ export default function Graph() {
             width="66"
             height="66"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -367,9 +367,9 @@ export default function Graph() {
             width="24"
             height="24"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -402,9 +402,9 @@ export default function Graph() {
             width="191"
             height="91"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -438,9 +438,9 @@ export default function Graph() {
             y2="546.483"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#C11C63" />
-            <stop offset="0.442308" stop-color="#A23ACC" />
-            <stop offset="1" stop-color="#7800E4" />
+            <stop stopColor="#C11C63" />
+            <stop offset="0.442308" stopColor="#A23ACC" />
+            <stop offset="1" stopColor="#7800E4" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_147_2"
@@ -450,9 +450,9 @@ export default function Graph() {
             y2="92.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#8E50EC" stop-opacity="0" />
-            <stop offset="0.5" stop-color="#8E50EC" />
-            <stop offset="1" stop-color="#8E50EC" stop-opacity="0" />
+            <stop stopColor="#8E50EC" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#8E50EC" />
+            <stop offset="1" stopColor="#8E50EC" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_147_2"
@@ -462,9 +462,9 @@ export default function Graph() {
             y2="169"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#8E50EC" stop-opacity="0" />
-            <stop offset="0.5" stop-color="#8E50EC" />
-            <stop offset="1" stop-color="#8E50EC" stop-opacity="0" />
+            <stop stopColor="#8E50EC" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#8E50EC" />
+            <stop offset="1" stopColor="#8E50EC" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

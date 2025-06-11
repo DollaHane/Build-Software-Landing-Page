@@ -29,9 +29,9 @@ export default function Tailwind({ height }: LogoProps) {
           cy="90"
           r="87"
           stroke="url(#paint0_linear_138_123)"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-dasharray="10 10"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeDasharray="10 10"
         />
         <path
           d="M59.4961 90C74.615 90 81.5399 96.9139 87.5195 102.88C91.1959 106.548 94.5108 109.86 99.1543 111.005C107.282 113.003 114.399 109.999 120.504 101.998C116.436 117.999 106.27 126 90 126C74.881 126 67.9562 119.093 61.9766 113.12C58.3076 109.459 54.993 106.141 50.3496 105.003C42.2143 103.005 35.0978 106.002 29 114.003C33.0676 98.0014 43.233 90.0001 59.4961 90ZM90 54C105.119 54 112.044 60.9066 118.023 66.8799C121.692 70.5411 125.014 73.8603 129.65 74.998C137.786 76.9963 144.902 73.9986 151 65.998C146.932 81.9993 136.767 89.9999 120.504 90C105.385 90 98.4601 83.0861 92.4805 77.1201C88.8041 73.4516 85.4895 70.1402 80.8535 68.9951C72.7182 66.9967 65.6013 70.0021 59.4961 78.0029C63.5637 62.0013 73.7368 54 90 54Z"
@@ -51,7 +51,7 @@ export default function Tailwind({ height }: LogoProps) {
           <path
             d="M59.4961 90C74.615 90 81.5399 96.9139 87.5195 102.88C91.1959 106.548 94.5108 109.86 99.1543 111.005C107.282 113.003 114.399 109.999 120.504 101.998C116.436 117.999 106.27 126 90 126C74.881 126 67.9562 119.093 61.9766 113.12C58.3076 109.459 54.993 106.141 50.3496 105.003C42.2143 103.005 35.0978 106.002 29 114.003C33.0676 98.0014 43.233 90.0001 59.4961 90ZM90 54C105.119 54 112.044 60.9066 118.023 66.8799C121.692 70.5411 125.014 73.8603 129.65 74.998C137.786 76.9963 144.902 73.9986 151 65.998C146.932 81.9993 136.767 89.9999 120.504 90C105.385 90 98.4601 83.0861 92.4805 77.1201C88.8041 73.4516 85.4895 70.1402 80.8535 68.9951C72.7182 66.9967 65.6013 70.0021 59.4961 78.0029C63.5637 62.0013 73.7368 54 90 54Z"
             fill="white"
-            fill-opacity="0.01"
+            fillOpacity="0.01"
           />
         </g>
         <defs>
@@ -62,9 +62,9 @@ export default function Tailwind({ height }: LogoProps) {
             width="142"
             height="92"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -108,9 +108,9 @@ export default function Tailwind({ height }: LogoProps) {
             width="172"
             height="122"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -143,7 +143,7 @@ export default function Tailwind({ height }: LogoProps) {
               result="noise1Clipped"
             />
             <feFlood
-              flood-color="rgba(255, 255, 255, 0.25)"
+              floodColor="rgba(255, 255, 255, 0.25)"
               result="color1Flood"
             />
             <feComposite
@@ -171,9 +171,9 @@ export default function Tailwind({ height }: LogoProps) {
             y2="159.6"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#8600FF" />
-            <stop offset="0.509615" stop-color="white" stop-opacity="0" />
-            <stop offset="1" stop-color="#B601FF" />
+            <stop stopColor="#8600FF" />
+            <stop offset="0.509615" stopColor="white" stopOpacity="0" />
+            <stop offset="1" stopColor="#B601FF" />
           </linearGradient>
           <image
             id="image0_138_123"

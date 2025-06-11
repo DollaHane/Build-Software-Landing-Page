@@ -1,12 +1,9 @@
 import React, { useRef } from "react"
-import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
-import BuilDark from "@/components/assets/Build_Dark.png"
-import BuildLight from "@/components/assets/Build_Light.png"
-
+import HeroBuild from "../sections-components/HeroBuild"
 import Background from "../sections-components/Background"
 import { Button } from "../ui/button"
 
@@ -36,18 +33,7 @@ export default function Home({ setSelectedPage }: Props) {
       >
         <div className="flex w-full flex-col items-start gap-5 mt-5">
           <div className="flex w-full items-center justify-center md:justify-start ">
-            <Image
-              src={BuilDark}
-              alt="build-dark"
-              className="hidden dark:block"
-              width={400}
-            />
-            <Image
-              src={BuildLight}
-              alt="build-light"
-              className="dark:hidden"
-              width={400}
-            />
+            <HeroBuild/>
           </div>
           <div className="flex relative text-center md:text-left">
             <h1 className="z-40 text-[13vw] text-primary lg:text-[6vw] font-extrabold leading-tight tracking-tighter">

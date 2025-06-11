@@ -12,14 +12,14 @@ export default function WaveBackground() {
       >
         <filter
           id="a"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
           height="483.509"
           width="1348.87"
           x=".264221"
           y=".022339"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             in="SourceGraphic"
             in2="BackgroundImageFix"
