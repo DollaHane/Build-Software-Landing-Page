@@ -11,7 +11,7 @@ import Wordpress from "../organisations/wordpress"
 import { ProgressiveBlur } from "../ui/progressive-blur"
 import { InfiniteSlider } from "../ui/progressive-blur-slide"
 
-const logoHeight = "h-6 md:h-10"
+const logoHeight = "h-10"
 
 export default function OrganisationSlide() {
   return (
