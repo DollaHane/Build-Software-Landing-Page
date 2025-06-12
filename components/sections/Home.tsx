@@ -3,8 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
-import HeroBuild from "../sections-components/HeroBuild"
+
 import Background from "../sections-components/Background"
+import HeroBuild from "../sections-components/HeroBuild"
 import { Button } from "../ui/button"
 
 type Props = {
@@ -33,7 +34,7 @@ export default function Home({ setSelectedPage }: Props) {
       >
         <div className="flex w-full flex-col items-start gap-5 mt-5">
           <div className="flex w-full items-center justify-center md:justify-start ">
-            <HeroBuild/>
+            <HeroBuild />
           </div>
           <div className="flex relative text-center md:text-left">
             <h1 className="z-40 text-[13vw] text-primary lg:text-[6vw] font-extrabold leading-tight tracking-tighter">
@@ -49,7 +50,7 @@ export default function Home({ setSelectedPage }: Props) {
               solutions
             </p>
           </div>
-          <h2 className="max-w-[900px] min-h-16 text-xl md:text-2xl font-mono text-primary text-center md:text-left">
+          <h2 className="max-w-[900px] min-h-16 text-xl font-mono text-primary text-center md:text-left">
             &quot;Data-driven cloud solutions tailored to helping small to
             medium-sized businesses reach their full potential.&quot;
           </h2>

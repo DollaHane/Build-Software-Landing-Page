@@ -10,6 +10,7 @@ import FigmaLaunchPng from "@/components/assets/graphics/Figma-Launch.png"
 
 import FigmaLaunch from "../sections-components/Figma-Launch"
 import OrganisationSlide from "../sections-components/OrganisationSlide"
+import { TextShimmer } from "../ui/text-shimmer"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -19,7 +20,6 @@ export default function Introduction({ setSelectedPage }: Props) {
   const [isSafari, setIsSafari] = useState(false)
 
   useEffect(() => {
-    // This runs only on the client after mount
     const userAgent = navigator.userAgent
     let isSafariBrowser = userAgent.includes("Safari")
     let isChromeBrowser = userAgent.includes("Chrome")
@@ -47,11 +47,12 @@ export default function Introduction({ setSelectedPage }: Props) {
           <h3>improve your business&apos;</h3>
         </div>
         <div className="text-[12vw] lg:text-[8vw]">
-          <h3 className="h-[12vw] lg:h-[8vw]">Efficiency</h3>
-          <div className="flex gap-5">
-            <h3>&</h3>
-            <h3>Growth</h3>
-          </div>
+          <h3 className="h-[12vw] lg:h-[8vw]">
+            <TextShimmer>Efficiency</TextShimmer>
+          </h3>
+          <h3 className="flex gap-5">
+            <TextShimmer>& Growth</TextShimmer>
+          </h3>
         </div>
         <div className="text-[5vw] md:text-[3vw]">
           <h3>with tailored software that</h3>
@@ -62,7 +63,7 @@ export default function Introduction({ setSelectedPage }: Props) {
       </div>
       <OrganisationSlide />
       <div className="grid h-auto grid-cols-1 py-16">
-        <div className="flex flex-col lg:text-xl px-10 w-full items-center gap-5 font-mono">
+        <div className="flex flex-col px-10 w-full items-center gap-5">
           <p>{servicesPage.paragraphOne}</p>
           <p>{servicesPage.paragraphTwo}</p>
         </div>

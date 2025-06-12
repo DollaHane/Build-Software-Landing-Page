@@ -7,6 +7,7 @@ import { SelectedPage } from "@/types/types"
 import ContactUs from "@/components/sections/ContactUs"
 import DesignBuildGrow from "@/components/sections/DesignBuildGrow"
 import Footer from "@/components/sections/Footer"
+import { FreqAskedQuest } from "@/components/sections/FreqAskedQuest"
 import Home from "@/components/sections/Home"
 import Introduction from "@/components/sections/Introduction"
 
@@ -45,6 +46,7 @@ export default function IndexPage() {
         <Home setSelectedPage={setSelectedPage} />
         <Introduction setSelectedPage={setSelectedPage} />
         <DesignBuildGrow setSelectedPage={setSelectedPage} />
+        <FreqAskedQuest setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />
         <Footer />
       </div>

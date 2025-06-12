@@ -4,7 +4,7 @@ import { ProgressiveBlur } from "../ui/progressive-blur"
 
 export default function Graph() {
   return (
-    <div className="relative flex h-min md:mt-16 w-full max-w-[500px]">
+    <div className="relative flex h-min w-full max-w-[500px]">
       <div className="w-2/4 h-[400px] absolute flex bg-gradient-to-r from-background via-background/50 to-background/0 top-0 -left-0 z-20" />
       <div className="w-2/4 h-[400px] absolute flex bg-gradient-to-l from-background via-background/50 to-background/0 top-0 -right-0 z-20" />
       <div className="w-full h-[150px] absolute flex bg-gradient-to-t from-background via-background/50 to-background/0 bottom-0 mx-auto z-20" />

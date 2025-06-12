@@ -100,7 +100,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mx-auto absolute top-0 w-full p-5 md:p-10 mt-32 z-40"
+        className="mx-auto absolute top-0 w-full p-5 md:p-10 mt-10 z-40"
       >
         <h1 className="text-[8vw] lg:text-[5vw] text-center leading-tight tracking-tighter z-50">
           Start{" "}

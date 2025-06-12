@@ -29,7 +29,7 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
               1
             </h3>
             <h3 className="text-[50px] w-full font-semibold z-30">Design:</h3>
-            <p className="z-30 lg:text-xl font-mono">{howPage.paragraphOne}</p>
+            <p className="z-30">{howPage.paragraphOne}</p>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
               2
             </h3>
             <h3 className="text-[50px] w-full font-semibold z-30">Build:</h3>
-            <p className="z-30 lg:text-xl font-mono">{howPage.paragraphTwo}</p>
+            <p className="z-30">{howPage.paragraphTwo}</p>
           </div>
         </div>
 
@@ -54,9 +54,7 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
               3
             </h3>
             <h3 className="text-[50px] w-full font-semibold z-30">Grow:</h3>
-            <p className="z-30 lg:text-xl font-mono">
-              {howPage.paragraphThree}
-            </p>
+            <p className="z-30">{howPage.paragraphThree}</p>
           </div>
           <div className=" pt-10 md:p-10 flex justify-center size-full">
             <Graph />
