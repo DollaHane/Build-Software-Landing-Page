@@ -33,8 +33,10 @@ export default function Introduction({ setSelectedPage }: Props) {
 
   return (
     <section
-      id="services"
+      id="about-us"
       className="z-40 md:px-10 min-h-screen mx-auto bg-transparent w-full"
+      role="region"
+      aria-labelledby="about-us-heading"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -43,20 +45,20 @@ export default function Introduction({ setSelectedPage }: Props) {
 
       <div className="px-10">
         <div className="text-[5vw] md:text-[3vw]">
-          <h3>helping you</h3>
-          <h3>improve your business&apos;</h3>
+          <h3 id="helping-you-heading">helping you</h3>
+          <h3 id="improve-heading">improve your business&apos;</h3>
         </div>
         <div className="text-[12vw] lg:text-[8vw]">
-          <h3 className="h-[12vw] lg:h-[8vw]">
+          <h3 id="efficiency-heading" className="h-[12vw] lg:h-[8vw]">
             <TextShimmer>Efficiency</TextShimmer>
           </h3>
-          <h3 className="flex gap-5">
+          <h3 id="growth-heading" className="flex gap-5">
             <TextShimmer>& Growth</TextShimmer>
           </h3>
         </div>
         <div className="text-[5vw] md:text-[3vw]">
-          <h3>with tailored software that</h3>
-          <h3 className="flex flex-wrap gap-3">
+          <h3 id="tailored-software-heading">with tailored software that</h3>
+          <h3 id="your-needs-heading" className="flex flex-wrap gap-3">
             <span>suites your needs.</span>
           </h3>
         </div>
@@ -70,7 +72,10 @@ export default function Introduction({ setSelectedPage }: Props) {
       </div>
       {isSafari ? (
         <div className="w-10/12 lg:w-2/3 mx-auto">
-          <Image src={FigmaLaunchPng} alt="design-developement-deployment" />
+          <Image
+            src={FigmaLaunchPng}
+            alt="Custom software design, development, and deployment process"
+          />
         </div>
       ) : (
         <FigmaLaunch />

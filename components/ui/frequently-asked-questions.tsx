@@ -41,7 +41,9 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
   ) => {
     return (
       <section
-        id="faq"
+        id="frequenstly-asked-questions"
+        role="region"
+        aria-labelledby="frequenstly-asked-questions-heading"
         ref={ref}
         className={cn(
           "w-full z-40 md:px-20 mx-auto bg-transparent mt-10",

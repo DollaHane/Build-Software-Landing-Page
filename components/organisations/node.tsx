@@ -8,6 +8,7 @@ export default function Node({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="node js"
         className={`${height}`}
         viewBox="0 0 390 164"
         fill="none"

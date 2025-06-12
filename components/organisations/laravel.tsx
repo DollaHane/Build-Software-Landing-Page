@@ -8,6 +8,7 @@ export default function Laravel({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="laravel backend"
         className={`${height}`}
         viewBox="0 0 846 180"
         fill="none"

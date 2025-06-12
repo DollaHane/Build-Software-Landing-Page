@@ -16,15 +16,49 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+  applicationName: siteConfig.name,
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  classification: siteConfig.classification,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    title: `${siteConfig.name} | Start Deploying Today`,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.imageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Tailored Application Solutions by Build Software",
+      },
+    ],
   },
 }
 

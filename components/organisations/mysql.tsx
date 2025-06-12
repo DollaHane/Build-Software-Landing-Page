@@ -8,6 +8,7 @@ export default function Mysql({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="mysql database"
         className={`${height}`}
         viewBox="0 0 967 180"
         fill="none"

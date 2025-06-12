@@ -24,6 +24,7 @@ export default function Graph() {
         blurIntensity={1}
       />
       <svg
+        id="growth and efficiency"
         className="flex w-full z-10"
         viewBox="0 0 983 545"
         fill="none"

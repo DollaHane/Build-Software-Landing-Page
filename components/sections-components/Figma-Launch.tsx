@@ -6,6 +6,7 @@ export default function FigmaLaunch() {
       <svg
         // width="1170"
         // height="472"
+        id="Custom software design, development, and deployment process"
         className="w-10/12 lg:w-2/3"
         viewBox="0 0 1170 472"
         fill="none"

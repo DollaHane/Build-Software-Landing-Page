@@ -15,8 +15,10 @@ type Props = {
 export default function DesignBuildGrow({ setSelectedPage }: Props) {
   return (
     <section
-      id="services"
+      id="how-we-work"
       className="z-40 px-10 md:px-20 min-h-screen mx-auto bg-transparent w-full mt-10"
+      role="region"
+      aria-labelledby="how-we-work-heading"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -28,7 +30,12 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
             <h3 className="absolute text-zinc-100 dark:text-zinc-700 text-[150px] font-bold z-20 -top-[95px] -left-5">
               1
             </h3>
-            <h3 className="text-[50px] w-full font-semibold z-30">Design:</h3>
+            <h3
+              id="software-design"
+              className="text-[50px] w-full font-semibold z-30"
+            >
+              Design:
+            </h3>
             <p className="z-30">{howPage.paragraphOne}</p>
           </div>
         </div>
@@ -43,7 +50,12 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
             <h3 className="absolute text-zinc-100 dark:text-zinc-700 text-[150px] font-bold z-20 -top-[95px] -left-5">
               2
             </h3>
-            <h3 className="text-[50px] w-full font-semibold z-30">Build:</h3>
+            <h3
+              id="software-development"
+              className="text-[50px] w-full font-semibold z-30"
+            >
+              Build:
+            </h3>
             <p className="z-30">{howPage.paragraphTwo}</p>
           </div>
         </div>
@@ -53,7 +65,12 @@ export default function DesignBuildGrow({ setSelectedPage }: Props) {
             <h3 className="absolute text-zinc-100 dark:text-zinc-700 text-[150px] font-bold z-20 -top-[95px] -left-5">
               3
             </h3>
-            <h3 className="text-[50px] w-full font-semibold z-30">Grow:</h3>
+            <h3
+              id="software-deployment"
+              className="text-[50px] w-full font-semibold z-30"
+            >
+              Grow:
+            </h3>
             <p className="z-30">{howPage.paragraphThree}</p>
           </div>
           <div className=" pt-10 md:p-10 flex justify-center size-full">

@@ -8,6 +8,7 @@ export default function Figma({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="figma design"
         className={`${height}`}
         viewBox="0 0 644 180"
         fill="none"

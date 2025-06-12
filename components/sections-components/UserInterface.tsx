@@ -4,6 +4,7 @@ export default function UserInterface() {
   return (
     <div className="absolute -top-0 flex w-full max-w-[500px] z-20">
       <svg
+        id="software development, wordpress, laravel, react js, next js"
         viewBox="0 0 1886 1505"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

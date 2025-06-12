@@ -26,6 +26,8 @@ export default function Home({ setSelectedPage }: Props) {
     <section
       id="home"
       className="container min-h-screen grid gap-6 pt-5 md:p-16 z-40"
+      role="region"
+      aria-labelledby="home-heading"
     >
       <motion.div
         className="w-full z-40"
@@ -37,7 +39,10 @@ export default function Home({ setSelectedPage }: Props) {
             <HeroBuild />
           </div>
           <div className="flex relative text-center md:text-left">
-            <h1 className="z-40 text-[13vw] text-primary lg:text-[6vw] font-extrabold leading-tight tracking-tighter">
+            <h1
+              id="home-heading"
+              className="z-40 text-[13vw] text-primary lg:text-[6vw] font-extrabold leading-tight tracking-tighter"
+            >
               <span className="p-1 bg-gradient-to-br from-violet-500 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
                 software
               </span>{" "}
@@ -50,9 +55,12 @@ export default function Home({ setSelectedPage }: Props) {
               solutions
             </p>
           </div>
-          <h2 className="max-w-[900px] min-h-16 text-xl font-mono text-primary text-center md:text-left">
-            &quot;Data-driven cloud solutions tailored to helping small to
-            medium-sized businesses reach their full potential.&quot;
+          <h2
+            id="home-subheading"
+            className="max-w-[900px] min-h-16 text-xl font-mono text-primary text-center md:text-left"
+          >
+            &quot;Data-driven cloud software solutions tailored to helping small
+            to medium-sized businesses optimise growth and efficiency.&quot;
           </h2>
         </div>
         <div className="flex gap-4 items-center justify-center">
@@ -60,6 +68,7 @@ export default function Home({ setSelectedPage }: Props) {
             className="mt-10 md:mt-16"
             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
             href={`#${SelectedPage.ContactUs}`}
+            aria-label="Deploy your software solution today"
           >
             <Button className="font-bold shadow-lg hover:scale-[1.1]">
               DEPLOY WITH US

@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { NavItem } from "@/types/nav"
-import build from "@/components/assets/Buildinit_Logo.png"
+import build from "@/components/assets/buildsoftware_logo.png"
 
 interface MainNavProps {
   items?: NavItem[]

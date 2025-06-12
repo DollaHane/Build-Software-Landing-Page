@@ -8,6 +8,7 @@ export default function ReactJS({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="node js"
         className={`h-${height}`}
         viewBox="0 0 740 180"
         fill="none"

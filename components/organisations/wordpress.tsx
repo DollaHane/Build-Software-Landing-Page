@@ -8,6 +8,7 @@ export default function Wordpress({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="wordpress plugin"
         className={`${height}`}
         viewBox="0 0 1383 180"
         fill="none"

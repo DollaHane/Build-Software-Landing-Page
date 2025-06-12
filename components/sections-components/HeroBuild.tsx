@@ -5,6 +5,7 @@ export default function HeroBuild() {
     <div>
       <svg
         className="w-[300px] lg:w-[400px]"
+        id="software developers"
         viewBox="0 0 814 351"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

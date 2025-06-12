@@ -95,8 +95,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
   // USER INTERFACE
   return (
     <section
-      id="contactus"
+      id="contact-us"
       className="relative bg-background h-screen max-h-[600px] md:max-h-[800px] w-full"
+      role="region"
+      aria-labelledby="contact-us-heading"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}

@@ -8,6 +8,7 @@ export default function Next({ height }: LogoProps) {
   return (
     <div>
       <svg
+        id="next js"
         className={`h-${height}`}
         viewBox="0 0 971 180"
         fill="none"
