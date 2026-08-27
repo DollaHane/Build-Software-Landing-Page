@@ -1,7 +1,4 @@
 import React from "react"
-import Image from "next/image"
-
-import logo from "@/components/assets/Buidl.png"
 
 export default function TermsAndConditions() {
   return (
@@ -30,7 +27,7 @@ export default function TermsAndConditions() {
           (collectively, the &apos;Services&apos;).
         </p>
         <p>
-          You can contact us by phone at +27 (0)60 320 7122, email at
+          You can contact us by phone at +27 (0)60 460 7122, email at
           shane@buildsoftware.co.za, or by mail to 36 Neethling Close, Kunene
           Park, Port Elizabeth, East Cape 6025, South Africa.
         </p>
@@ -165,9 +162,9 @@ export default function TermsAndConditions() {
         <p>
           If you wish to make any use of the Services, Content, or Marks other
           than as set out in this section or elsewhere in our Legal Terms,
-          please address your request to: shane@silan.co.za. If we ever grant
-          you the permission to post, reproduce, or publicly display any part of
-          our Services or Content, you must identify us as the owners or
+          please address your request to: shane@buildsoftware.co.za. If we ever
+          grant you the permission to post, reproduce, or publicly display any
+          part of our Services or Content, you must identify us as the owners or
           licensors of the Services, Content, or Marks and ensure that any
           copyright or proprietary notice appears or is visible on posting,
           reproducing, or displaying our Content.
@@ -696,7 +693,7 @@ export default function TermsAndConditions() {
           <li>36 Neethling Close</li>
           <li>Kunene Park</li>
           <li>Port Elizabeth, East Cape 6025 South Africa</li>
-          <li>Phone: +27 (0)60 320 7122</li>
+          <li>Phone: +27 (0)60 460 7122</li>
           <li>shane@buildsoftware.co.za</li>
         </ul>
         <a className="italic text-slate-400" href="#top">

@@ -4,11 +4,11 @@
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronDown, Mail } from "lucide-react"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 
-import { SelectedPage } from "@/types/types"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Section } from "@/components/layout/Section"
+import { SectionLink } from "@/components/layout/SectionLink"
 
 interface FaqSectionProps extends React.HTMLAttributes<HTMLElement> {
   title: string
@@ -21,97 +21,80 @@ interface FaqSectionProps extends React.HTMLAttributes<HTMLElement> {
     title: string
     description: string
     buttonText: string
-    onContact?: () => void
   }
-  setSelectedPage: (value: SelectedPage) => void
 }
 
-const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
-  (
-    {
-      className,
-      title,
-      description,
-      items,
-      contactInfo,
-      setSelectedPage,
-      ...props
-    },
-    ref
-  ) => {
-    return (
-      <section
-        id="frequenstly-asked-questions"
-        role="region"
-        aria-labelledby="frequenstly-asked-questions-heading"
-        ref={ref}
-        className={cn(
-          "w-full z-40 md:px-20 mx-auto bg-transparent mt-10",
-          className
-        )}
-        {...props}
-      >
-        <div className="container">
-          {/* Header */}
+export function FaqSection({
+  className,
+  title,
+  description,
+  items,
+  contactInfo,
+  ...props
+}: FaqSectionProps) {
+  return (
+    <Section
+      id="faq"
+      surface="base"
+      labelledBy="faq-heading"
+      className={cn("py-24 md:px-20", className)}
+    >
+      <div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto text-center mb-12"
+        >
+          <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text text-transparent">
+            {title}
+          </h2>
+          {description && (
+            <p className="text-sm text-muted-foreground">{description}</p>
+          )}
+        </motion.div>
+
+        {/* FAQ Items */}
+        <div className="max-w-2xl mx-auto space-y-2">
+          {items.map((item, index) => (
+            <FaqItem
+              key={index}
+              question={item.question}
+              answer={item.answer}
+              index={index}
+            />
+          ))}
+        </div>
+
+        {/* Contact Section */}
+        {contactInfo && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-2xl mx-auto text-center mb-12"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="max-w-md mx-auto mt-12 p-6 rounded-lg text-center"
           >
-            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text text-transparent">
-              {title}
-            </h2>
-            {description && (
-              <p className="text-sm text-muted-foreground">{description}</p>
-            )}
+            <div className="inline-flex items-center justify-center p-1.5 rounded-full mb-4">
+              <Mail className="h-4 w-4" />
+            </div>
+            <p className="text-sm font-medium text-primary mb-1">
+              {contactInfo.title}
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">
+              {contactInfo.description}
+            </p>
+            <SectionLink id="contact">
+              <Button className="font-bold shadow-lg hover:scale-[1.1]">
+                {contactInfo.buttonText}
+              </Button>
+            </SectionLink>
           </motion.div>
-
-          {/* FAQ Items */}
-          <div className="max-w-2xl mx-auto space-y-2">
-            {items.map((item, index) => (
-              <FaqItem
-                key={index}
-                question={item.question}
-                answer={item.answer}
-                index={index}
-              />
-            ))}
-          </div>
-
-          {/* Contact Section */}
-          {contactInfo && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="max-w-md mx-auto mt-12 p-6 rounded-lg text-center"
-            >
-              <div className="inline-flex items-center justify-center p-1.5 rounded-full mb-4">
-                <Mail className="h-4 w-4" />
-              </div>
-              <p className="text-sm font-medium text-primary mb-1">
-                {contactInfo.title}
-              </p>
-              <p className="text-xs text-muted-foreground mb-4">
-                {contactInfo.description}
-              </p>
-              <AnchorLink
-                onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-                href={`#${SelectedPage.ContactUs}`}
-              >
-                <Button className="font-bold shadow-lg hover:scale-[1.1]">
-                  Contact Us
-                </Button>
-              </AnchorLink>
-            </motion.div>
-          )}
-        </div>
-      </section>
-    )
-  }
-)
-FaqSection.displayName = "FaqSection"
+        )}
+      </div>
+    </Section>
+  )
+}
 
 // Internal FaqItem component
 const FaqItem = React.forwardRef<
@@ -201,5 +184,3 @@ const FaqItem = React.forwardRef<
   )
 })
 FaqItem.displayName = "FaqItem"
-
-export { FaqSection }

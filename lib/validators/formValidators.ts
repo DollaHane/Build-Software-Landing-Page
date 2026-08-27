@@ -1,33 +1,25 @@
 import { z } from "zod"
 
 export const onChangeAsyncDebounceMs = 500
-export const onChangeAsync = z.string().refine(
-  async (value) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    return !value.includes("error")
-  },
-  {
-    message: "No 'error' allowed in message",
-  }
-)
 
 export const name = z
   .string()
-  .min(3, {
-    message: "Your first name must be at least 3 character long",
-  })
-  .max(50, {
-    message: "Your first name must be less than 50 characters long",
-  })
+  .min(2, { message: "Please enter your name" })
+  .max(50, { message: "Name must be less than 50 characters" })
 
-export const email = z.string().min(1, {
-  message: "Your email must be at least 3 character long",
-})
+export const email = z
+  .string()
+  .min(1, { message: "Please enter your email address" })
+  .email({ message: "That doesn't look like a valid email address" })
 
-export const website = z.string().max(255, {
-  message: "The subject must be less than 255 characters long",
-})
-export const source = z.string().max(500, {
-  message: "Your source must be less than 500 characters long",
-})
-export const service = z.string()
+export const service = z.string().min(1, { message: "Please choose a service" })
+
+export const budget = z.string().min(1, { message: "Please choose a budget" })
+
+export const timeline = z
+  .string()
+  .min(1, { message: "Please choose a timeline" })
+
+export const brief = z
+  .string()
+  .max(2000, { message: "Please keep the brief under 2000 characters" })

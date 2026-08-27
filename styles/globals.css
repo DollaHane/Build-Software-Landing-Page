@@ -5,72 +5,212 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --backgroundTwo: 0 0% 19%;
-    --foreground: 222.2 47.4% 11.2%;
-    --bricks: 215.4 16.3% 97.9%;
-
-    --muted: 210 0% 96.1%;
-    --muted-foreground: 215.4 0% 56.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --foreground: 240 10% 6%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 240 10% 6%;
 
-    --primary: 0, 0%, 19%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 6%;
 
-    --secondary: 240, 5%, 56%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 258 90% 66%;
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
+    --primary: 240 10% 6%;
+    --primary-foreground: 0 0% 98%;
 
-    --ring: 215 20.2% 65.1%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 6%;
 
-    --radius: 0.5rem;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --backgroundTwo: 240 10% 6%;
+    --bricks: 240 5% 98%;
+
+    --radius: 0.75rem;
+
+    /* ---- brand: named by ramp position, not colour ---- */
+    --brand-1: 258 90% 66%;
+    --brand-2: 271 81% 56%;
+    --brand-3: 333 71% 51%;
+    --brand: var(--brand-2);
+    --brand-foreground: 0 0% 100%;
+    --brand-gradient: linear-gradient(
+      135deg,
+      hsl(var(--brand-1)) 0%,
+      hsl(var(--brand-2)) 50%,
+      hsl(var(--brand-3)) 100%
+    );
+
+    /* ---- consumed by components/ui/text-shimmer.tsx ---- */
+    --shimmer-base: 240 4% 60%;
+    --shimmer-highlight: 240 10% 18%;
   }
 
   .dark {
-    --background: 0 0% 0.09%;
-    --backgroundTwo: 0 0% 100%;
-    --foreground: 213 31% 91%;
-    --bricks: 215.4 16.3% 8.9%;
+    --background: 240 8% 4%;
+    --foreground: 0 0% 96%;
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 240, 4%, 46%;
+    --card: 240 6% 8%;
+    --card-foreground: 0 0% 96%;
 
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
+    --popover: 240 6% 8%;
+    --popover-foreground: 0 0% 96%;
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
+    --muted: 240 5% 12%;
+    --muted-foreground: 240 5% 62%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 240 5% 16%;
+    --input: 240 5% 16%;
+    --ring: 258 90% 72%;
 
-    --card: 0 0% 9%;
-    --card-foreground: 213 31% 91%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 8% 4%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 0 0% 96%;
 
-    --secondary: 240, 5%, 65%;
-    --secondary-foreground: 210 40% 98%;
+    --accent: 240 5% 14%;
+    --accent-foreground: 0 0% 96%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
 
-    --ring: 216 34% 17%;
+    --backgroundTwo: 0 0% 96%;
+    --bricks: 240 6% 7%;
 
-    --radius: 0.5rem;
+    --brand-1: 258 90% 72%;
+    --brand-2: 271 85% 66%;
+    --brand-3: 333 80% 62%;
+
+    --shimmer-base: 240 4% 42%;
+    --shimmer-highlight: 0 0% 100%;
+  }
+
+  /* =========================================================
+     SURFACES
+     Two named surfaces whose meaning is redefined by the
+     global theme. In light mode they alternate true
+     light/dark. In dark mode alternation collapses to tonal
+     elevation, so a user who chose dark never gets a
+     full-bleed white section mid-scroll.
+     ========================================================= */
+
+  .surface-base {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 6%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --primary: 240 10% 6%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 6%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 6%;
+    --backgroundTwo: 240 10% 6%;
+    --bricks: 240 5% 98%;
+    --shimmer-base: 240 4% 60%;
+    --shimmer-highlight: 240 10% 18%;
+    color-scheme: light;
+  }
+
+  .surface-contrast {
+    --background: 240 8% 5%;
+    --foreground: 0 0% 98%;
+    --card: 240 6% 9%;
+    --card-foreground: 0 0% 98%;
+    --muted: 240 5% 13%;
+    --muted-foreground: 240 5% 64%;
+    --border: 240 5% 17%;
+    --input: 240 5% 17%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 8% 5%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 5% 14%;
+    --accent-foreground: 0 0% 98%;
+    --backgroundTwo: 0 0% 98%;
+    --bricks: 240 6% 8%;
+    --brand-1: 258 90% 72%;
+    --brand-2: 271 85% 66%;
+    --brand-3: 333 80% 62%;
+    --shimmer-base: 240 4% 42%;
+    --shimmer-highlight: 0 0% 100%;
+    color-scheme: dark;
+  }
+
+  /* In dark mode the surface classes must re-declare the FULL token set.
+     The surface class sits on the section element itself, so its light-mode
+     values would otherwise win over anything merely inherited from .dark on
+     <html> — inheritance never reaches an element that declares the property
+     directly. Alternation collapses to tonal elevation here. */
+  .dark .surface-base {
+    --background: 240 8% 4%;
+    --foreground: 0 0% 96%;
+    --card: 240 6% 8%;
+    --card-foreground: 0 0% 96%;
+    --muted: 240 5% 11%;
+    --muted-foreground: 240 5% 62%;
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 8% 4%;
+    --secondary: 240 5% 14%;
+    --secondary-foreground: 0 0% 96%;
+    --accent: 240 5% 14%;
+    --accent-foreground: 0 0% 96%;
+    --backgroundTwo: 0 0% 96%;
+    --bricks: 240 6% 6%;
+    --brand-1: 258 90% 72%;
+    --brand-2: 271 85% 66%;
+    --brand-3: 333 80% 62%;
+    --shimmer-base: 240 4% 42%;
+    --shimmer-highlight: 0 0% 100%;
+    color-scheme: dark;
+  }
+
+  .dark .surface-contrast {
+    --background: 240 6% 9%;
+    --foreground: 0 0% 96%;
+    --card: 240 5% 13%;
+    --card-foreground: 0 0% 96%;
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 66%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 6% 9%;
+    --secondary: 240 5% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --accent: 240 5% 18%;
+    --accent-foreground: 0 0% 96%;
+    --backgroundTwo: 0 0% 96%;
+    --bricks: 240 6% 11%;
+    --brand-1: 258 90% 72%;
+    --brand-2: 271 85% 66%;
+    --brand-3: 333 80% 62%;
+    --shimmer-base: 240 4% 42%;
+    --shimmer-highlight: 0 0% 100%;
+    color-scheme: dark;
+  }
+
+  .surface-base,
+  .surface-contrast {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: background-color 200ms linear, color 200ms linear;
   }
 }
 
@@ -84,7 +224,32 @@
   }
 }
 
+/* ---- Lenis 1.x base styles (were missing entirely) ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
 
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
 
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
 
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
 
+/* ---- reduced-motion backstop for anything framer-motion can't see ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

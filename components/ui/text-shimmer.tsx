@@ -31,9 +31,10 @@ export function TextShimmer({
       // @ts-ignore
       className={cn(
         "relative inline-block bg-[length:250%_100%,auto] bg-clip-text",
-        "text-transparent [--base-color:#989898] [--base-gradient-color:#2f2f2f]",
+        // Driven by --shimmer-base / --shimmer-highlight so it follows the
+        // surface it sits in, rather than only the global theme.
+        "text-transparent [--base-color:hsl(var(--shimmer-base))] [--base-gradient-color:hsl(var(--shimmer-highlight))]",
         "[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))] [background-repeat:no-repeat,padding-box]",
-        "dark:[--base-color:#7e7e7e] dark:[--base-gradient-color:#ffffff] dark:[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]",
         className
       )}
       initial={{ backgroundPosition: "100% center" }}

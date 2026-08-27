@@ -3,15 +3,17 @@ import { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
+import { fontMono } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/Toaster"
 import Providers from "@/components/global/Providers"
+import { ScrollProgress } from "@/components/motion/ScrollProgress"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/theme/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme/theme-provider"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -26,13 +28,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
   viewport: {
     width: "device-width",
     initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
   },
   robots: {
     index: true,
@@ -78,14 +77,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
+            fontMono.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            disableTransitionOnChange
+          >
             <Providers>
               <div className="relative flex min-h-screen flex-col">
+                <div
+                  id="scroll-sentinel"
+                  aria-hidden
+                  className="absolute top-0 h-px w-full"
+                />
+                <ScrollProgress />
                 <SiteHeader />
-                <div className="flex-1">{children}</div>
+                <main className="flex-1">{children}</main>
               </div>
               <TailwindIndicator />
             </Providers>

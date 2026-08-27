@@ -4,6 +4,7 @@ import {
   Container,
   Head,
   Heading,
+  Hr,
   Html,
   Preview,
   Text,
@@ -12,29 +13,37 @@ import {
 interface BuidlMailProps {
   name: string
   email: string
-  website: string
-  source: string
   service: string
+  budget: string
+  timeline: string
+  brief: string
 }
 
 export const buidlMail: React.FC<Readonly<BuidlMailProps>> = ({
   name,
   email,
-  website,
-  source,
   service,
+  budget,
+  timeline,
+  brief,
 }) => (
   <Html>
     <Head />
-    <Preview>{name} has sent a mail from the Buidl site!</Preview>
+    <Preview>{name} sent an enquiry from the Build Software site</Preview>
     <Body>
       <Container>
-        <Heading>Mail Recieved From Buidl Site</Heading>
-        <Text>{name} has sent you an enquiry</Text>
+        <Heading>New enquiry from buildsoftware.co.za</Heading>
+        <Text>
+          <strong>{name}</strong> has sent you an enquiry.
+        </Text>
+        <Hr />
         <Text>Email address: {email}</Text>
-        <Text>Existing website: {website}</Text>
-        <Text>Service requested: {service}</Text>
-        <Text>Heared about you via: {source}</Text>
+        <Text>Service required: {service}</Text>
+        <Text>Budget: {budget}</Text>
+        <Text>Timeline: {timeline}</Text>
+        <Hr />
+        <Text>Brief:</Text>
+        <Text>{brief || "(none provided)"}</Text>
       </Container>
     </Body>
   </Html>

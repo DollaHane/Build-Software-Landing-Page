@@ -1,10 +1,7 @@
-import { JetBrains_Mono as FontMono, Inter as FontSans } from "next/font/google"
+import { JetBrains_Mono as FontMono } from "next/font/google"
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
+// Geist (loaded in app/layout.tsx) is the sans face; Tailwind maps
+// font-sans -> --font-geist-sans. Only the mono face is loaded here.
 export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",

@@ -1,0 +1,7 @@
+export { hero } from "./hero"
+export { SERVICES } from "./services"
+export { CAPABILITIES, INDUSTRIES } from "./work"
+export { PROCESS } from "./process"
+export { STACK_GROUPS, MARQUEE_LOGOS } from "./stack"
+export { FAQS } from "./faq"
+export { SERVICE_OPTIONS, BUDGET_OPTIONS, TIMELINE_OPTIONS } from "./contact"

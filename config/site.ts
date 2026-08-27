@@ -7,13 +7,7 @@ export const siteConfig = {
   url: "https://www.buildsoftware.co.za",
   imageUrl:
     "https://www.buildsoftware.co.za/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFigma-Launch.80546cb2.png&w=3840&q=75",
-  mainNav: [
-    {
-      title: "Home",
-      href: "/",
-    },
-  ],
-  classification: "Software developement",
+  classification: "Software development",
   keywords: [
     "application",
     "software",
